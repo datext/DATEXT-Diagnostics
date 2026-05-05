@@ -2,7 +2,7 @@
 
 DATEXT Diagnostics ist ein Windows-Diagnosewerkzeug zur Analyse von Netzwerkverbindungen, Systemzustand und E-Mail-Infrastruktur. 
 
-Selbstlaufend, keine Installation erforderlich.
+Selbstlaufend, keine Installation erforderlich. Ab Version 00.99.08.03 werden die notwendigen .NET Dateien in den Ordner "%LOCALAPPDATA%\DATEXT-Diagnostics\Runtime" extrahiert.
 
 Es richtet sich an IT-Administratoren, Systemverantwortliche und technisch versierte Anwender.
 
