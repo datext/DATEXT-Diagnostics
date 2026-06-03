@@ -1,34 +1,149 @@
-# DATEXT-Diagnostics
+# DATEXT Diagnostics
 
-DATEXT Diagnostics ist ein Windows-Diagnosewerkzeug zur Analyse von Netzwerkverbindungen, Systemzustand und E-Mail-Infrastruktur. 
+**Professionelles Windows-Systemdiagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-Selbstlaufend, keine Installation erforderlich.
+![Version](https://img.shields.io/badge/Version-0.99.09.1-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
+![Framework](https://img.shields.io/badge/.NET-8.0-purple)
+![License](https://img.shields.io/badge/License-Proprietary-red)
 
-Es richtet sich an IT-Administratoren, Systemverantwortliche und technisch versierte Anwender.
+---
 
-# Screenshot Übersicht
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/175c0341-e009-424e-a026-050e0f1a36b0" />
+## 📋 Übersicht
 
-# Screenshot System
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/356d7654-7ce6-427b-9975-d9c12e313b5f" />
+DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadministratoren und IT-Professionals eine schnelle, strukturierte Übersicht über alle relevanten System-, Netzwerk- und Sicherheitsinformationen eines Windows-Rechners bietet — ohne Kommandozeile, ohne Scriptaufwand.
 
-# Screenshot Netzwerk
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/69834fc9-d9eb-488b-be89-199665d4ce97" />
+---
 
-# Sreenshot Paket Captures
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/74c980c0-ff1b-4786-95cb-ade077d3abcc" />
+## Funktionen
 
-# Screenshot Performance
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/d2d5d2c0-b30e-4f5b-877e-ace774806b22" />
+## Übersicht
+- Anzeige relevanter lokaler Syteminformationen mit farblich codierten Bagdes zur schnellen Übersicht
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/377c6e4d-6f9c-479d-867b-a733ba8806b1" />
 
-# Screenshot E-Mail Analyse
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/e5127a69-c7b8-4a63-82a2-fd0b37e078d6" />
+## System Informationen
+- gezielte Auswertung von verschiedenen Systeminformationen und Analysen
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/11c189b8-e50f-4adb-913e-e0f4b0d02dee" />
 
-# Screenshot Windows App Updates
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/81dca20e-f404-4fbb-8e68-130fdb258447" />
+## Netzwerk
+- Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie Visualisierung
+- diverse Tools zur Auswertung und Analyse von Netzwerkkarten, Netzwerkverbindungen, DHCP-Discovery ipV4/ipV6, DNS, Portscans u.v.m.
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/4fc9fe5b-07a2-4e92-b42c-fd08beee6ecc" />
 
-# Screenshot Inventarisierung
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/9d6950c0-dd7a-4c45-9b13-8231f0abc7b9" />
+## Active Directory
+- mit installiertem RSAT kann ein Active Directory nach Benutzern / Computern durchsucht werden
+- Analyse der zugewiesenen Group-Policies
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/349cda09-65f0-4c7e-9e1d-d2364d4562cb" />
 
-# Screenshot MS-SQL Analyse
-<img width="1351" height="908" alt="image" src="https://github.com/user-attachments/assets/7d9f217b-fa63-400b-a334-08c9ea41a634" />
+## MS-SQL
+- SQL-Instanz-Erkennung (Registry, SQL Browser, Broadcast)
+- Datenbankanalyse mit Windows-Authentifizierung und Impersonation
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/a5f4d60d-05b6-4449-bf41-c488d0407b4a" />
+
+## Packet Capture
+- Paket-Mitschnitt via PKTMON oder NetSH-Traces. Konvertierung der Mitschnitte von .etl nach .pcap zur Auswertung via WireShark
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/d51d2bee-f9f8-4205-a195-54e145fa1327" />
+
+## Performance
+- Messung der Internet-Bandbreite mit dem Ookla Speedtest CLI
+- Messung der netzwerkinternen Bandbreite
+- Messung der Festplattengeschwindigkeit via WinSat und oder DiskSpd.exe
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/12f93131-b60d-4e31-92fc-cc209f172198" />
+
+## E-Mail & Domäne
+- Analyse zuständiger MX Mailserver einer Email-Adresse und Test der Erreichbarkeit um Zustellungsprobleme zu analysieren
+- Header-Analyse von Email-Kopfzeilen
+- E-Mail Domain Analyse nach MX-Server, SPF, DKIM, DMarc, BiMi und Auswertung der Zustellbarkeit zwischen zwei Mail-Domains aufgrund von SPF, DKIM, DMARC
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/bde929d8-7f9a-4547-924d-b5ca813caf51" />
+
+## Updates
+- Aktualiserung von installierten Anwendungen via Winget
+- Suche und Installation von Anwendungen via Winget
+
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/641d1eb1-8d41-4668-9dbe-64d7cb385da8" />
+
+### Inventar
+- Hardware- und Software-Inventarisierung des lokalen Rechners
+- Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten CSV. Auswertung der gesammelten Geräteinformationen.
+- Export nach PDF, XLSX, CSV, JSON
+<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/6eee47fd-5e6b-4a10-8598-a74b8673059e" />
+
+---
+
+## 🚀 Installation
+
+DATEXT Diagnostics wird als **Self-Contained Single-File Executable** ausgeliefert — keine Installation erforderlich, keine .NET-Laufzeit auf dem Zielsystem notwendig.
+
+```
+DATEXT.Diagnostics.exe
+```
+
+### Systemvoraussetzungen
+
+| Komponente      | Anforderung                                                        |
+|-----------------|--------------------------------------------------------------------|
+| Betriebssystem  | Windows 10 (1903+) / Windows 11                                    |
+| Architektur     | x64                                                                |
+| .NET Runtime    | Nicht erforderlich (Self-Contained)                                |
+| Rechte          | Standard-Benutzer (einige Funktionen erfordern Admin-Rechte)       |
+| Speicherplatz   | ca. 250 MB (inkl. Extraktionsordner)                               |
+
+---
+
+## 🔧 Optionale Komponenten
+
+| Komponente            | Funktion                              | Bezug                        |
+|-----------------------|---------------------------------------|------------------------------|
+| **Ookla Speedtest CLI** | Internet-Speedtest                  | Automatisch über App installierbar |
+| **RSAT (AD-Tools)**   | Active Directory Abfragen             | Windows Features             |
+| **DATEXTAgent**       | Remote-Inventarisierung über HTTP-API | Separat deploybar            |
+
+---
+
+## 📤 Export-Formate
+
+Alle Dialoge unterstützen den Export in folgende Formate:
+
+- 📄 **PDF** — druckfertige Berichte mit DATEXT-Branding
+- 📊 **XLSX** — Excel-kompatible Tabellen
+- 📋 **CSV** — für Weiterverarbeitung in anderen Tools
+- `{}` **JSON** — für API-Integration und Scripting
+- 📝 **TXT** — einfache Textausgabe
+
+---
+
+**Stack:**
+
+| Komponente         | Technologie                          |
+|--------------------|--------------------------------------|
+| UI-Framework       | WPF / .NET 8 (Self-Contained, win-x64) |
+| Windows-APIs       | WMI, P/Invoke, SetupAPI              |
+| PDF-Export         | PDFsharp 6.x                         |
+| Excel-Export       | ClosedXML                            |
+| JSON               | Newtonsoft.Json                      |
+| Aufgabenplanung    | TaskScheduler                        |
+
+---
+
+## 🤝 DATEXTAgent
+
+Für die Remote-Inventarisierung steht der **DATEXTAgent** zur Verfügung — ein schlanker Windows-Dienst der auf dem Zielsystem installiert wird und Hardware- sowie Softwareinformationen über eine lokale HTTP-API bereitstellt. DATEXT Diagnostics kann diese Daten abrufen und in den Inventar-Export integrieren.
+
+---
+
+## 📞 Support & Kontakt
+
+- 🌐 [www.datext.de](https://www.datext.de)
+- 📧 [info@datext.de](mailto:info@datext.de)
+
+---
+
+## ⚖️ Lizenz
+
+Copyright © 2024–2026 DATEXT GmbH. Alle Rechte vorbehalten.  
+Dieses Projekt ist nicht Open Source. Die Verwendung, Vervielfältigung oder Weitergabe  
+ohne ausdrückliche schriftliche Genehmigung der DATEXT GmbH ist nicht gestattet.
+
+---
+
+*Entwickelt mit ❤️ in Hagen, NRW*
