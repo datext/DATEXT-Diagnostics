@@ -64,7 +64,7 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 
 ### Inventar
 - Hardware- und Software-Inventarisierung des lokalen Rechners
-- Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten CSV. Auswertung der gesammelten Geräteinformationen.
+- Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten .json Datei. Auswertung der gesammelten Geräteinformationen.
 - Export nach PDF, XLSX, CSV, JSON
 <img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/6eee47fd-5e6b-4a10-8598-a74b8673059e" />
 
@@ -97,6 +97,7 @@ DATEXT.Diagnostics.exe
 | **Ookla Speedtest CLI** | Internet-Speedtest                  | Automatisch über App installierbar |
 | **RSAT (AD-Tools)**   | Active Directory Abfragen             | Windows Features             |
 | **DATEXTAgent**       | Remote-Inventarisierung über HTTP-API | Separat deploybar            |
+| **DiskSpd**           | Disk/Festplatten Performance          | Separat deploybar            |
 
 ---
 
