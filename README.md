@@ -2,7 +2,7 @@
 
 **Professionelles Windows-Systemdiagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-![Version](https://img.shields.io/badge/Version-0.99.09.2-blue)
+![Version](https://img.shields.io/badge/Version-0.99.10.2-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
