@@ -46,7 +46,7 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 <img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/0347cbd4-9f29-4c9d-afa6-5e2a5cb86e58" />
 
 ## Performance
-- Messung der Internet-Bandbreite mit dem <a href="https://www.speedtest.net/apps/cli">Ookla Speedtest CLI</a>. Erfordert Internetezugriff auf Port TCP 8080 für die Bandbreitenmessung!
+- Messung der Internet-Bandbreite mit dem <a href="https://www.speedtest.net/apps/cli" target="_blank">Ookla Speedtest CLI</a>. Erfordert Internetezugriff auf Port TCP 8080 für die Bandbreitenmessung!
 - Messung der netzwerkinternen Bandbreite
 - Messung der Festplattengeschwindigkeit via WinSat und oder DiskSpd.exe
 <img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/9ed107db-91bd-4357-9e82-0904160e1490" />
