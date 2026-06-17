@@ -19,54 +19,53 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 
 ## Übersicht
 - Anzeige relevanter lokaler Syteminformationen mit farblich codierten Bagdes zur schnellen Übersicht
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/377c6e4d-6f9c-479d-867b-a733ba8806b1" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/caa119ff-9d95-4e2a-85ec-4652efea4e0f" />
 
 ## System Informationen
 - gezielte Auswertung von verschiedenen Systeminformationen und Analysen
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/11c189b8-e50f-4adb-913e-e0f4b0d02dee" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/f9874692-a399-47b5-804e-69f111f8d414" />
 
 ## Netzwerk
 - Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie Visualisierung
 - diverse Tools zur Auswertung und Analyse von Netzwerkkarten, Netzwerkverbindungen, DHCP-Discovery ipV4/ipV6, DNS, Portscans u.v.m.
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/4fc9fe5b-07a2-4e92-b42c-fd08beee6ecc" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/a0c09fbd-2a70-48d4-9bbe-29d76e9ff447" />
 
 ## Active Directory
 - mit installiertem RSAT kann ein Active Directory nach Benutzern / Computern durchsucht werden
 - Analyse der zugewiesenen Group-Policies
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/349cda09-65f0-4c7e-9e1d-d2364d4562cb" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/4ada3c37-22e6-4fd0-a5dd-f0883b575760" />
 
 ## MS-SQL
 - SQL-Instanz-Erkennung (Registry, SQL Browser, Broadcast)
 - Datenbankanalyse mit Windows-Authentifizierung und Impersonation
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/a5f4d60d-05b6-4449-bf41-c488d0407b4a" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/063c7b69-8065-4c68-b782-e4183f528134" />
 
 ## Packet Capture
 - Paket-Mitschnitt via PKTMON oder NetSH-Traces. Konvertierung der Mitschnitte von .etl nach .pcap zur Auswertung via WireShark
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/d51d2bee-f9f8-4205-a195-54e145fa1327" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/0347cbd4-9f29-4c9d-afa6-5e2a5cb86e58" />
 
 ## Performance
 - Messung der Internet-Bandbreite mit dem Ookla Speedtest CLI
 - Messung der netzwerkinternen Bandbreite
 - Messung der Festplattengeschwindigkeit via WinSat und oder DiskSpd.exe
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/12f93131-b60d-4e31-92fc-cc209f172198" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/9ed107db-91bd-4357-9e82-0904160e1490" />
 
 ## E-Mail & Domäne
 - Analyse zuständiger MX Mailserver einer Email-Adresse und Test der Erreichbarkeit um Zustellungsprobleme zu analysieren
 - Header-Analyse von Email-Kopfzeilen
 - E-Mail Domain Analyse nach MX-Server, SPF, DKIM, DMarc, BiMi und Auswertung der Zustellbarkeit zwischen zwei Mail-Domains aufgrund von SPF, DKIM, DMARC
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/bde929d8-7f9a-4547-924d-b5ca813caf51" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/2e8114bb-72b5-400e-9e0d-1a0f40e1be21" />
 
 ## Updates
 - Aktualiserung von installierten Anwendungen via Winget
 - Suche und Installation von Anwendungen via Winget
-
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/641d1eb1-8d41-4668-9dbe-64d7cb385da8" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/592790bd-2012-41a0-bb1e-038c69b3af23" />
 
 ### Inventar
 - Hardware- und Software-Inventarisierung des lokalen Rechners
 - Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten .json Datei. Auswertung der gesammelten Geräteinformationen.
 - Export nach PDF, XLSX, CSV, JSON
-<img width="1421" height="864" alt="image" src="https://github.com/user-attachments/assets/6eee47fd-5e6b-4a10-8598-a74b8673059e" />
+<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/cf8e662f-b9ae-43be-b970-4750b970c7fb" />
 
 ---
 
