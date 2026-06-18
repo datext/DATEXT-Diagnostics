@@ -2,7 +2,7 @@
 
 **Professionelles Windows-Systemdiagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-![Version](https://img.shields.io/badge/Version-0.99.11.1-blue)
+![Version](https://img.shields.io/badge/Version-0.99.11.3-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
@@ -63,7 +63,7 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 - Suche und Installation von Anwendungen via Winget
 <img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/592790bd-2012-41a0-bb1e-038c69b3af23" />
 
-### Inventar
+## Inventar
 - Hardware- und Software-Inventarisierung des lokalen Rechners
 - Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten .json Datei. Auswertung der gesammelten Geräteinformationen.
 - Export nach PDF, XLSX, CSV, JSON
