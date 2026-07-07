@@ -20,54 +20,54 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 ## Übersicht
 - Anzeige relevanter lokaler Syteminformationen mit farblich codierten Bagdes zur schnellen Übersicht
 - Ermittlung und visuelle Anzeige von erkannten CG-NAT ISP Anschluß und / oder erkannter aktiver VPN Verbindung
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/caa119ff-9d95-4e2a-85ec-4652efea4e0f" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/ec74b73a-8371-4f12-abfa-05c84ca76859" />
 
 ## System Informationen
 - gezielte Auswertung von verschiedenen Systeminformationen und Analysen
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/f9874692-a399-47b5-804e-69f111f8d414" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/e306945f-efad-4b96-b59d-806d8719b86b" />
 
 ## Netzwerk
 - Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie Visualisierung
 - diverse Tools zur Auswertung und Analyse von Netzwerkkarten, Netzwerkverbindungen, DHCP-Discovery ipV4/ipV6, DNS, Portscans u.v.m.
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/a0c09fbd-2a70-48d4-9bbe-29d76e9ff447" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/ea35dbe8-26f5-4549-9a63-33f665c79441" />
 
 ## Active Directory
 - mit installiertem RSAT kann ein Active Directory nach Benutzern / Computern durchsucht werden
 - Analyse der zugewiesenen Group-Policies
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/4ada3c37-22e6-4fd0-a5dd-f0883b575760" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/dce125ed-d2c1-4eb3-8fbb-1a7d04bf3e1b" />
 
 ## MS-SQL
 - SQL-Instanz-Erkennung (Registry, SQL Browser, Broadcast)
 - Datenbankanalyse mit Windows-Authentifizierung und Impersonation
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/063c7b69-8065-4c68-b782-e4183f528134" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/fbf5affa-b7a0-42a0-b3dc-bc391ffa5c9e" />
 
 ## Packet Capture
 - Paket-Mitschnitt via PKTMON oder NetSH-Traces. Konvertierung der Mitschnitte von .etl nach .pcap zur Auswertung via WireShark
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/0347cbd4-9f29-4c9d-afa6-5e2a5cb86e58" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/35c34e8d-a6c0-4226-8cd0-199b30bcb075" />
 
 ## Performance
 - Messung der Internet-Bandbreite mit dem <a href="https://www.speedtest.net/apps/cli" target="_blank">Ookla Speedtest CLI</a>. Erfordert Internetzugriff auf Port TCP 8080 für die Bandbreitenmessung!
 - Manuelle Berechnung der Download- und Uploadzeiten für individuell angegebene Bandbreiten und Datenmengen
 - Messung der netzwerkinternen Bandbreite
 - Messung der Festplattengeschwindigkeit via WinSat und oder DiskSpd.exe
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/9ed107db-91bd-4357-9e82-0904160e1490" />
+<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/e356e055-0d78-45c4-9018-46978e96f6dc" />
 
 ## E-Mail & Domäne
 - Analyse zuständiger MX Mailserver einer Email-Adresse und Test der Erreichbarkeit um Zustellungsprobleme zu analysieren
 - Header-Analyse von Email-Kopfzeilen
 - E-Mail Domain Analyse nach MX-Server, SPF, DKIM, DMarc, BiMi und Auswertung der Zustellbarkeit zwischen zwei Mail-Domains aufgrund von SPF, DKIM, DMARC
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/2e8114bb-72b5-400e-9e0d-1a0f40e1be21" />
+<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/363f0f48-2a6e-4efa-8821-f5977f2f96fb" />
 
 ## Updates
 - Aktualiserung von installierten Anwendungen via Winget
 - Suche und Installation von Anwendungen via Winget
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/592790bd-2012-41a0-bb1e-038c69b3af23" />
+<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/7141c7d9-9eb6-4467-8b1b-f387b45254eb" />
 
 ## Inventar
 - Hardware- und Software-Inventarisierung des lokalen Rechners
 - Erstellung eines Inventarisierungs-Agenten zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten .json Datei. Auswertung der gesammelten Geräteinformationen.
 - Export nach PDF, XLSX, CSV, JSON
-<img width="1566" height="937" alt="image" src="https://github.com/user-attachments/assets/cf8e662f-b9ae-43be-b970-4750b970c7fb" />
+<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/19742715-d5be-4342-9f20-7c5284205e05" />
 
 ---
 
