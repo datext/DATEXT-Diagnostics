@@ -38,6 +38,10 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 - diverse Tools zur Auswertung und Analyse von Netzwerkkarten, Netzwerkverbindungen, DHCP-Discovery ipV4/ipV6, DNS, Portscans u.v.m.
 <img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/e54d5692-21e1-4870-906f-484d6f14b7c3" />
 
+Verbindungsanalyse mit Risikobewertung
+<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/b5ded776-9f07-46fb-bd29-79188f8afe12" />
+
+
 ## Active Directory
 - mit installiertem RSAT kann ein Active Directory nach Benutzern / Computern durchsucht werden
 - Analyse der zugewiesenen Group-Policies
