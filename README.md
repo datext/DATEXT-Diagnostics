@@ -20,7 +20,7 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 ## Übersicht
 - Anzeige relevanter lokaler Syteminformationen mit farblich codierten Bagdes zur schnellen Übersicht
 - Ermittlung und visuelle Anzeige von erkannten CG-NAT ISP Anschluß und / oder erkannter aktiver VPN Verbindung
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/ec74b73a-8371-4f12-abfa-05c84ca76859" />
+<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/18d8ca00-f392-41e4-bf4c-478bec91bcac" />
 
 ## System Informationen
 - gezielte Auswertung von verschiedenen Systeminformationen und Analysen
