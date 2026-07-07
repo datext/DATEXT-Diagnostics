@@ -24,12 +24,19 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 
 ## System Informationen
 - gezielte Auswertung von verschiedenen Systeminformationen und Analysen
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/e306945f-efad-4b96-b59d-806d8719b86b" />
+- UEFI-Boot Zertifikat prüfen
+- Autorun-Analyse über
+- Ereignis-Log Auswertung, auch mit Schnellfiltern zu gängigen Problemen und ermittlung von zusammenhängenden Events.
+- Auswertung installierter Softwware
+- Windows Komponenten Prüfung und Behebung
+- System-Verwaltungsprogramme im Schnellzugriff
+<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/b61fa338-450f-438e-bcdd-aa47736d8491" />
+
 
 ## Netzwerk
 - Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie Visualisierung
 - diverse Tools zur Auswertung und Analyse von Netzwerkkarten, Netzwerkverbindungen, DHCP-Discovery ipV4/ipV6, DNS, Portscans u.v.m.
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/ea35dbe8-26f5-4549-9a63-33f665c79441" />
+<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/e54d5692-21e1-4870-906f-484d6f14b7c3" />
 
 ## Active Directory
 - mit installiertem RSAT kann ein Active Directory nach Benutzern / Computern durchsucht werden
