@@ -4,7 +4,7 @@
 
 **Professionelles Windows-Systemdiagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-![Version](https://img.shields.io/badge/Version-0.99.11.7-blue)
+![Version](https://img.shields.io/badge/Version-0.99.11.8-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
@@ -29,7 +29,7 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - Ermittlung und visuelle Anzeige von erkanntem CG-NAT-ISP-Anschluss und/oder erkannter aktiver VPN-Verbindung
 - 💡 *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol direkt an Ping, Traceroute, DNS-Auflösung oder Port-Scan übergeben — ohne sie manuell abzutippen
 
-<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/18d8ca00-f392-41e4-bf4c-478bec91bcac" />
+<img width="1400" height="926" alt="image" src="https://github.com/user-attachments/assets/f6a29a8b-4055-4af2-9bb5-bd247da98fb3" />
 
 ### System Informationen
 - **System-Health** — Ampel-Bewertung von Hardware, Sicherheit, Speicherplatz, Netzwerk und Ereignissen; schnellster Weg zur Ersteinschätzung
