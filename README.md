@@ -9,7 +9,7 @@
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
-[Funktionen](#funktionen) · [Installation](#-installation) · [Systemvoraussetzungen](#systemvoraussetzungen) · [Optionale Komponenten](#-optionale-komponenten) · [Export-Formate](#-export-formate) · [DATEXTAgent](#-datextagent) · [Build aus Quellcode](#️-build-aus-quellcode) · [Support](#-support--kontakt)
+[Funktionen](#funktionen) · [Installation](#-installation) · [Systemvoraussetzungen](#systemvoraussetzungen) · [Optionale Komponenten](#-optionale-komponenten) · [Export-Formate](#-export-formate) · [DATEXTAgent](#-datextagent) · [Support](#-support--kontakt)
 
 </div>
 
