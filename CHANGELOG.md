@@ -69,16 +69,20 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 ### Changed
 - System, Ereignis-Viewer: Erweiterung und Gruppierung der Schnellfilter Auswahl
 
-> - System & Stabilität
->> - Abstürze/Hänger, Bluescreen, Dienst-Abstürze, Festplatten-Warnungen, Rechner-Neustarts, Ressourcenengpässe, Treiberfehler, UEFI CA 2023 Update
-> - Sicherheit & Konten
->> - Anmeldefehler, Erfolgreiche Anmeldungen, Kontoverwaltung, Kontosperrungen
-> - Netzwerk
->> - DNS-Fehler, Netzwerkprobleme, RDP-Verbindungen
-> - Anwendungen & Updates
->> - App-Abstürze, GPO-Anwendungsfehler, Update-Fehler
-> - Peripherie & Hardware
->> - Druckprobleme, USB-Geräteprobleme, Zeitsync-Probleme
+ - System & Stabilität
+  - Abstürze/Hänger, Bluescreen, Dienst-Abstürze, Festplatten-Warnungen, Rechner-Neustarts, Ressourcenengpässe, Treiberfehler, UEFI CA 2023 Update
+ - Sicherheit & Konten
+  - Anmeldefehler, Erfolgreiche Anmeldungen, Kontoverwaltung, Kontosperrungen
+ - Netzwerk
+  - DNS-Fehler, Netzwerkprobleme, RDP-Verbindungen
+ - Anwendungen & Updates
+  - App-Abstürze, GPO-Anwendungsfehler, Update-Fehler
+ - Peripherie & Hardware
+  - Druckprobleme, USB-Geräteprobleme, Zeitsync-Probleme
+
+ - 💡 Kontext-Korrelation: verwandte Ereignisse lassen sich im Umkreis von ±5 Minuten um einen ausgewählten Eintrag anzeigen
+ - 💡 Anonymisierter Export für Support-Tickets, ohne sensible Nutzerdaten preiszugeben
+
 
 <img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/cd7468ef-b942-425e-9da9-2a92ab58c038" />
 
