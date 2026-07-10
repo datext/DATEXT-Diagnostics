@@ -64,6 +64,167 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
 ---
 
+## [0.99.11.6]
+
+### Changed
+- System, Ereignis-Viewer: Erweiterung und Gruppierung der Schnellfilter Auswahl
+
+> - System & Stabilität
+>> - Abstürze/Hänger, Bluescreen, Dienst-Abstürze, Festplatten-Warnungen, Rechner-Neustarts, Ressourcenengpässe, Treiberfehler, UEFI CA 2023 Update
+> - Sicherheit & Konten
+>> - Anmeldefehler, Erfolgreiche Anmeldungen, Kontoverwaltung, Kontosperrungen
+> - Netzwerk
+>> - DNS-Fehler, Netzwerkprobleme, RDP-Verbindungen
+> - Anwendungen & Updates
+>> - App-Abstürze, GPO-Anwendungsfehler, Update-Fehler
+> - Peripherie & Hardware
+>> - Druckprobleme, USB-Geräteprobleme, Zeitsync-Probleme
+
+<img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/cd7468ef-b942-425e-9da9-2a92ab58c038" />
+
+### Fixed
+-Systemübersicht: Diverse kleine Bugfixes
+
+
+
+---
+
+## [0.99.11.5]
+
+### Changed
+- Optimierung des PDF-Exports der Systeminformationen aus der Systemübersicht.
+
+### Fixed
+-Diverse kleine Bugfixes
+
+---
+
+## [0.99.11.3]
+
+### Changed
+- Systemübersicht Optimierung beim App-Start, Anzeige eines Laufbalken um die aktiven Hintergrundabfragen zu visualisieren.
+- Update, Winget: Optimierung der App Aktualisierung über den Update / Winget Bereich.
+> - Hinweis auf fehlende lokale Administratorberechtigungen die zur Installation / Aktualisierung von Apps erforderlich sein können und Möglichkeit die App mit erhöhten Rechten neu zu starten.
+> - Apps mit dem PIN Flag sind von dem Update aller Apps ausgeschlossen und können jetzt gezielt aktualisiert werden
+> - Die einzelnen App Updates können jetzt über ein Kontextmenü bedient werden und z.B. gezielt mit PIN vor weiteren Updates exkludiert werden oder PIN aufgehoben werden.
+
+<img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/cf1069e6-1f76-4822-91ee-e51c9efb46fc" />
+
+---
+
+## [0.99.11.1]
+
+### Added
+- Netzwerk, Verbindungen: neue "Risiko" Spalte:
+> - RiskScore berechnet sich aus 5 Signalen: Shodan-Rep (+3), unsignierter Prozess mit ESTABLISHED (+2), bekannter C2-Port (+3), unbekannter Prozess (+1), Hochrisiko-Land (+1)
+> - RiskLabel: ✅ OK / 🔵 Gering / 🟡 Mittel / 🔴 Hoch
+> - RiskColor: transparent / hellblau / hellgelb / hellrot als Zellhintergrund
+> - RiskTooltip: listet alle aktiven Signale auf
+> - Score wird automatisch neu berechnet wenn ShodanRepColor gesetzt wird (via OnPropertyChanged)
+- Netzwerk, Verbindungen: Filterung der Verbindungen nach Top-Prozessen oder über die Badges über der Ausgabetabelle.
+- Netzwerk, Verbindungen: Manuelle bzw. automatische Aktualisierungen erzeugen eine Verbindungshistorie auf die Zugegriffen werden kann
+
+<img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/e32e5198-5b0f-4bce-8252-b9f9a30671a9" />
+
+- Sytermübersicht: Erkennung von CGNAT ISP Internetanbindung auf Basis der RFC 6598, 100.64.0.0/10 
+- Sytermübersicht: Hinweis auf doppeltes-NAT, wenn Router hinter Router skaliert wurde
+
+---
+
+
+## [0.99.11.0]
+
+### Fixed
+- Systemübersicht: Bugfixing bei der Erkennung einer aktiven VPN Verbindung und Badge Anzeige
+- Systemübersicht: Bugfixing bei der Erkennung einer IPv4 Internetanbindung mit CGNAT ISP, wie Vodafone etc.
+
+<img width="1336" height="867" alt="image" src="https://github.com/user-attachments/assets/a93ca3ac-aad7-4e92-86f5-76f74901e5de" />
+
+---
+
+## [0.99.10.2]
+
+### Fixed
+- Bugfixing im DHCP-Discovery. Zuverlässigere Erkennung von IPv4 und IPv6 Rogue DHCP Servern
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f67b78b6-9e05-4b21-9670-1043e5652296" />
+
+---
+
+## [0.99.10.1]
+
+### Added
+- Systemüberblick: Ergänzung in der Internet Verbindungsinformation in der Übersicht um mögliche öffentliche IP aus bekannten Cloudhosting Umgebungen, wie AWS, Azure.
+
+<img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/cf3c4a7d-f5c0-4c52-89b6-1cde8f76e8db" />
+
+---
+
+## [0.99.10.0]
+
+### Added
+- Internet Speedtest ermöglicht jetzt die benutzerdefinierte Transferzeit-Berechnung mit individueller Dowload- und Uploadgeschwindigkeit in Mbit/s.
+
+### Changed
+- Änderung des Standard-Speicherpfades für Dritt-Tools wie ooka.exe oder diskspd.exe auf %USERPROFILE%\Documents\DATEXT-Diagnostics\Tools
+- Änderung des Standard-Speicherpfades für Paketmitschnitte von PKTMon oder NetSH Trace auf %USERPROFILE%\Documents\DATEXT-Diagnostics\NetworkTraces
+
+### Fixed
+- Systemüberblick: Erkennung installierter Antivirensoftware optimiert.
+
+---
+
+## [0.99.09.2]
+
+### Fixed
+- Systemüberblick: Erkennung installierter Antivirensoftware optimiert.
+
+---
+
+## [0.99.09.0]
+
+### Fixed
+- Erkennungsroutine der zu löschenden veralteter Programm-Ordner unter %APPDATA%/local/temp/.net/DATEXT-Diagnostics nach Updates.
+- Exportfunktion in der "Übersicht" wieder hergestellt
+
+---
+
+## [0.99.09.0]
+
+### Added
+- Korrektur der ermittelten Durchschnittswerte im Internet-Speedtest
+- App extrahiert die .Net Komponenten jetzt nur noch einmal pro Version in einen eigenen Ordner unter %LOCALAPPDATA%\Temp\.net\DATEXT-Diagnostics\<xxx> und bietet bei einer App Aktualisierung die Löschung von alten Unterordnern an.
+
+---
+
+## [0.99.08.4]
+
+### Added
+- Portscan Dialog erweitert um UDP Unterstützung. Manuelle Porteingabe kann jetzt gezielt nach UDP, TCP, oder UDP+TCP abgefragt werden.
+- Beim Start einer neuen Version ab 0.99.08.04 wird das Löschen von temporären Ordnern unter %userprofile%\AppData\Local\Temp\.net\DATEXT-Diagnostics
+angeboten, die vorherige Programmversionen erstellt haben.
+
+---
+
+## [0.99.08.3]
+
+### Added
+- Kleinere Bugfixes, insbesondere die Aktualisierung von Statusinformationen in der Systemübersicht.
+- Erweiterte Auswertung der E-Mail & Domain Abfragen.
+
+### Fixed
+- Email-Check: schnellere Ermittlung des zuständigen SMTP Servers einer Domain
+- Email-Check: ausführlichere Verbindungsinformationen
+- Email-Check: zusätzliche Auswertung der Sicherheitsinformationen einer SMTP-Verbindung
+- Email-Check: Testmail senden ermöglicht auch einen MX-Direkttest um MX zu MX Verbindungsinformationen zu liefern
+- Header-Analyse: zusätzliche Verlaufshistorie von unterschiedlichen Mailheader-Auswertungen integriert
+- E-Mail-Analyse: zusätzliche Verlaufshistorie von unterschiedlichen Mailheader-Auswertungen integriert
+- E-Mail-Analyse: BIMI Abfrage integriert
+- E-Mail-Analyse: Kommunikationsauswertung zwischen zwei Domains auf Basis der ermittelten SPF, DKIM, DMARC Werte und damit verbundene Erfolgsaussicht auf erfolgreiche Zustellung
+- PDF Exportfunktion optisch optimiert.
+
+---
+
 ## [0.99.006]
 
 ### Added
