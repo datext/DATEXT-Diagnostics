@@ -5,6 +5,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
 ## [Unreleased]
 
+
 ## [0.99.11.9] - 2026-07-10
 
 ### Added
@@ -12,6 +13,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 - **Troubleshooting**: neue Sektion "Weitere Werkzeuge" – Systemschutz-Einstellungen öffnen, Internet-Explorer-Optionen öffnen, temporäre Windows-Dateien löschen (mit Scan/Bestätigung/Ergebnis), Windows Store zurücksetzen, nach Windows-Updates suchen, PC neu starten (inkl. "Neustart abbrechen"). Bewusst als Einzel-Buttons statt Checkliste, da der Dialog nicht auf WU-Reparatur begrenzt ist
 - **WindowsComponentCheckDialog**: DISM CheckHealth als neue Phase 2 ergänzt (schneller Beschädigungs-Flag-Check vor dem eigentlichen ScanHealth) – Phasen 2–3 (ScanHealth) und 3–4 (RestoreHealth) entsprechend verschoben
 - **SystemOverviewDialog**: Windows-Produktschlüssel-Zeile unter der Betriebssystem-Ausgabe (BIOS/UEFI-hinterlegter OEM-Key via `SoftwareLicensingService`, inkl. Copy-Button; zeigt „–" wenn nicht auslesbar)
+- **HelpDialog**: neue Handbuchseite "Troubleshooting" (System-Gruppe) – beschreibt die WU-Reparatur-Checkliste und die Sektion "Weitere Werkzeuge", inkl. PDF-Export-Einbindung
 
 ### Changed
 - **Troubleshooting**: Winsock/WinHTTP-Reset an letzte Stelle (Schritt 7) verschoben, standardmäßig deaktiviert und optisch als eigener, härterer Abschnitt mit Warnhinweis abgegrenzt (kein Bestandteil des eigentlichen WU-Resets, kann fest hinterlegte IP-/Proxy-Konfigurationen beeinträchtigen)
@@ -81,9 +83,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
   - Druckprobleme, USB-Geräteprobleme, Zeitsync-Probleme
 
 - **Kontextmenü auf Ereigniseintrag erweitert**
-  - 💡 Kontext-Korrelation: verwandte Ereignisse lassen sich im Umkreis von ±5 Minuten um einen ausgewählten Eintrag anzeigen
-- **Export erweitert**
-  - 💡 Anonymisierter Export für Support-Tickets, ohne sensible Nutzerdaten preiszugeben
+ - 💡 Kontext-Korrelation: verwandte Ereignisse lassen sich im Umkreis von ±5 Minuten um einen ausgewählten Eintrag anzeigen
+ - 💡 Anonymisierter Export für Support-Tickets, ohne sensible Nutzerdaten preiszugeben
 
 
 <img width="1586" height="901" alt="image" src="https://github.com/user-attachments/assets/cd7468ef-b942-425e-9da9-2a92ab58c038" />
