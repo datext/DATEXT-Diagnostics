@@ -3,8 +3,23 @@
 Alle nennenswerten Änderungen an DATEXT Diagnostics werden in dieser Datei dokumentiert.
 Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
-## [Unreleased]
+## [0.99.11.11] - 2026-07-14
 
+### Changed
+- **Troubleshooting**: `WindowsComponentCheckDialog` ("Windows Komponenten") als eigenständiger Nav-Punkt entfernt und 1:1 in den Troubleshooting-Dialog eingebettet (Abschnitt "Systemdatei- & Image-Integrität", auf-/zuklappbar) – inhaltlich ebenfalls ein Troubleshooting-Werkzeug, keine Logik dupliziert
+- **Troubleshooting**: Checkbox-Liste + "Ausgewählte Schritte ausführen" durch unabhängige Einzel-Buttons ersetzt (analog "Weitere Werkzeuge") – jede Aktion läuft sofort bei Klick
+- **Troubleshooting**: Ex-Schritte 1–3 (Update-Ordner, BITS-Queue, DLL-Reregistrierung) zu einem Button gebündelt; Update-Richtlinien, gpupdate und Update-Komponentenspeicher-Bereinigung sind jetzt eigene Buttons
+- **Troubleshooting**: Update-Komponentenspeicher-Bereinigung um Option `/ResetBase` erweitert (mit Bestätigungsdialog, da nicht umkehrbar: installierte Updates werden dauerhaft fixiert, dafür mehr freigegebener Speicher)
+- **Troubleshooting**: kombinierter Winsock/WinHTTP-Schritt in drei unabhängige netsh-Aktionen aufgeteilt (`netsh int ip reset` neu, `netsh winsock reset`, `netsh winhttp reset proxy`), jeweils mit Kontexthinweis zum Anwendungsfall; `netsh int ip reset` erkennt eine installierte Hyper-V-Rolle (Dienst `vmms`) und verlangt dann eine gesonderte Bestätigung mit den konkreten Risiken (vSwitch-Bindungen, NIC-Teaming, VLAN, statische IPs)
+- **HelpDialog**: Inhalte der bisherigen "Windows Komponenten Check"-Seite in die Troubleshooting-Handbuchseite integriert, eigener Nav-Punkt entfernt
+- **Windows Komponenten Check**: Reihenfolge auf DISM zuerst, SFC zuletzt umgestellt (CheckHealth → ScanHealth → ggf. RestoreHealth → SFC /scannow), damit SFC beim Reparieren auf einen bereits von DISM geprüften/reparierten Komponentenspeicher zugreifen kann
+- **SystemHealthDialog**: acht Scan-Bereiche (Hardware, Betriebssystem, Speicher, UAC/fehlgeschlagene Anmeldungen, Netzwerkadapter/Gateway/DNS, Dienste, Ereignisse, installierte Software) laufen jetzt vollständig ohne PowerShell-Subprozess – native WMI-Abfragen (`ManagementObjectSearcher`), Registry-Zugriffe, `System.Diagnostics.Eventing.Reader.EventLogReader`, `NetworkInterface` und `Process`-Klasse statt `Get-WmiObject`/`Get-WinEvent`/`Get-NetAdapter` etc. Eliminiert für diese Bereiche das größte verbleibende AV-Heuristik-Merkmal komplett (statt es nur zu drosseln) und ist spürbar schneller. BitLocker-Status läuft jetzt über einen direkten `manage-bde.exe`-Aufruf statt eines PowerShell-Wrappers. Die nicht sauber portierbaren Bereiche (Defender/Firewall-Status, SMB1/RDP/NLA/Credential-Guard/NTP-Härtungs-Checks, Netzwerkzonen/Hyper-V-SET-Switches, Performance/Aufgaben/Windows-Features/Server-Rollen) bleiben vorerst PowerShell-basiert. Die nie funktionale "ausstehende Updates"-Anzeige (PSWindowsUpdate-Modul, praktisch nie installiert) wurde ersatzlos entfernt.
+
+### Fixed
+- **Troubleshooting**: eingebetteter Windows-Komponenten-Check ließ sich per Touch/Touchpad nicht scrollen – verschachtelter innerer `ScrollViewer` fing die Scrollgesten ab, bevor sie den äußeren ScrollViewer des Troubleshooting-Dialogs erreichten. Da der Dialog nur noch eingebettet verwendet wird, wurde der innere ScrollViewer entfernt.
+- **SystemHealthDialog**: Start des Health-Checks wurde auf Systemen mit Malwarebytes als heuristisch erkanntes Trojaner-/Dropper-Verhalten eingestuft und die App beendet. Ursache: `RunPsAsync` startete PowerShell-Skripte per `-EncodedCommand` (Base64, ein stark gewichtetes AV-Heuristik-Merkmal) und der Scan feuerte beim Start ~10 dieser versteckten PowerShell-Kindprozesse gleichzeitig per `Task.WhenAll`. Skripte laufen jetzt als temporäre `.ps1`-Datei (`-File` statt `-EncodedCommand`), zusätzlich auf maximal 3 gleichzeitige PowerShell-Prozesse gedrosselt (`SemaphoreSlim`)
+
+---
 
 ## [0.99.11.9] - 2026-07-10
 
