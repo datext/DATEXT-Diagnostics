@@ -4,6 +4,9 @@ Alle nennenswerten Änderungen an DATEXT Diagnostics werden in dieser Datei doku
 Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
 ## [0.99.11.11] - 2026-07-14
+Neuer Troubleshooting Dialog für Windows Komponenten-Check, Windows Update Prüfung, TCP Verbindungsprobleme und diverse System-Werkzeuge.
+
+<img width="1670" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ea04c28-126a-4073-b9bd-2fd0f4bf4e53" />
 
 ### Changed
 - **Troubleshooting**: `WindowsComponentCheckDialog` ("Windows Komponenten") als eigenständiger Nav-Punkt entfernt und 1:1 in den Troubleshooting-Dialog eingebettet (Abschnitt "Systemdatei- & Image-Integrität", auf-/zuklappbar) – inhaltlich ebenfalls ein Troubleshooting-Werkzeug, keine Logik dupliziert
