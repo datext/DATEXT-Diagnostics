@@ -38,11 +38,12 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - **Ereignis-Log-Auswertung**, auch mit Schnellfiltern zu gängigen Problemen und Ermittlung von zusammenhängenden Events
   - 💡 *Kontext-Korrelation:* verwandte Ereignisse im Umkreis von ±5 Minuten um einen ausgewählten Eintrag anzeigen
   - 💡 *Anonymisierter Export* für Support-Tickets, ohne sensible Nutzerdaten preiszugeben
-- Auswertung installierter Software mit Such- und Exportfunktion
-- **Windows-Komponenten-Prüfung und -Behebung** über SFC und DISM
-- System-Verwaltungsprogramme im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
+- **Installierte Software** Übersicht mit Such- und Exportfunktion
+- **System-Verwaltungsprogramme** im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
+- **Troubleshooting** für Windows Komponentenüberprüfung (DISM / SFC), Windows Update Reparatur, Netzwerk-Stack Resets, diverse weitere Werkzeuge
 
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/96ea53d2-8351-4bdc-b790-295ece8ac79f" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/b8b0505c-cc90-44bf-9ab1-bc6b9ac5f85e" />
 
 ### Netzwerk
 - Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie-Visualisierung
