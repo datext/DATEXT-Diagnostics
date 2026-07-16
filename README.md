@@ -29,7 +29,7 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - Ermittlung und visuelle Anzeige von erkanntem CG-NAT-ISP-Anschluss und/oder erkannter aktiver VPN-Verbindung
 - 💡 *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol direkt an Ping, Traceroute, DNS-Auflösung oder Port-Scan übergeben — ohne sie manuell abzutippen
 
-<img width="1400" height="926" alt="image" src="https://github.com/user-attachments/assets/f6a29a8b-4055-4af2-9bb5-bd247da98fb3" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/fbb1054d-b0f3-4428-bbbd-b16f44546b98" />
 
 ### System Informationen
 - **System-Health** — Ampel-Bewertung von Hardware, Sicherheit, Speicherplatz, Netzwerk und Ereignissen; schnellster Weg zur Ersteinschätzung
@@ -42,7 +42,7 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - **Windows-Komponenten-Prüfung und -Behebung** über SFC und DISM
 - System-Verwaltungsprogramme im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
 
-<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/b61fa338-450f-438e-bcdd-aa47736d8491" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/96ea53d2-8351-4bdc-b790-295ece8ac79f" />
 
 ### Netzwerk
 - Netzwerk- und Gerätescan mit Gerätetyp-Erkennung via PING, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP und SNMP-Info, dazu Topologie-Visualisierung
@@ -53,24 +53,24 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - **Netzwerk & Verbindungen** — Hub mit sechs Reitern (Netzwerkkarten, Routing-Tabelle, Verbindungen, Netzwerk-Analyse, Netzwerklast, Diagnose)
 - **DHCP-Discovery** IPv4/IPv6 — erkennt alle antwortenden DHCP-Server, deckt Rogue-DHCP zuverlässig auf
 
-<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/e54d5692-21e1-4870-906f-484d6f14b7c3" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/d1833c8e-1502-43b9-b3f1-6fbb31a02126" />
 
 **Verbindungsanalyse mit Risikobewertung** — jede aktive TCP-/UDP-Verbindung wird dem auslösenden Prozess zugeordnet (inkl. Authenticode-Signaturprüfung), auffällige Ziel-IPs werden automatisch gegen VirusTotal und Shodan abgeglichen.
 
-<img width="1404" height="761" alt="image" src="https://github.com/user-attachments/assets/b5ded776-9f07-46fb-bd29-79188f8afe12" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/f23955bd-87d1-4ba6-b872-9ed2200aa92a" />
 
 ### Active Directory
 - mit installiertem RSAT kann ein Active Directory nach Benutzern/Computern durchsucht werden (automatische Domain-Controller-Erkennung, keine manuelle Serverangabe nötig)
 - Analyse der zugewiesenen Group-Policies inkl. Verarbeitungsreihenfolge und Vererbung — deckt auf, warum eine erwartete Richtlinie auf einem Rechner nicht ankommt
 
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/dce125ed-d2c1-4eb3-8fbb-1a7d04bf3e1b" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/39984655-d296-4e49-af89-422742c661ef" />
 
 ### MS-SQL
 - SQL-Instanz-Erkennung (Registry, SQL Browser, Broadcast)
 - Datenbankanalyse mit Windows-Authentifizierung und Impersonation
 - 💡 Deckt neben der reinen Erreichbarkeit auch Aktivität (laufende Abfragen, Sperren), Performance-Kennzahlen (u. a. Page Life Expectancy) und Konfiguration ab
 
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/fbf5affa-b7a0-42a0-b3dc-bc391ffa5c9e" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/6ee1c87b-3652-4f8e-9882-12bccc3fcee3" />
 
 ### Packet Capture
 - Paket-Mitschnitt via PKTMON (direkt über den Windows-Kernel, ganz ohne Drittanbieter-Treiber) oder NetSH-Traces (ETW-basiert, häufig vom Microsoft-Support angefordert)
@@ -85,28 +85,29 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - Messung der Festplattengeschwindigkeit via WinSat und/oder DiskSpd.exe (sequenziell und 4K-Random, inkl. IOPS)
 - 💡 Bis zu 10 Messungen der aktuellen Sitzung werden zum direkten Vorher-/Nachher-Vergleich vorgehalten
 
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/e356e055-0d78-45c4-9018-46978e96f6dc" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7b0f4a76-2052-4359-8db9-88abdaf0afe7" />
 
 ### E-Mail & Domäne
 - Analyse zuständiger MX-Mailserver einer E-Mail-Adresse und Test der Erreichbarkeit (echter SMTP-Verbindungsaufbau inkl. TLS und vollständigem Protokollmitschnitt), um Zustellungsprobleme zu analysieren
 - Header-Analyse von E-Mail-Kopfzeilen — Routing-Pfad mit Zeitstempeln je Hop, SPF-/DKIM-/DMARC-/BIMI-Prüfung, Spam-Score
 - E-Mail-Domain-Analyse nach MX-Server, SPF, DKIM, DMARC, BIMI und Auswertung der Zustellbarkeit zwischen zwei Mail-Domains aufgrund von SPF, DKIM, DMARC, inkl. Blacklist-Prüfung
 
-<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/363f0f48-2a6e-4efa-8821-f5977f2f96fb" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/bf53d8c3-a7a6-4c21-9fea-e5a59d1cd9c0" />
 
 ### Updates
 - Aktualisierung von installierten Anwendungen via Winget
 - Suche und Installation von Anwendungen via Winget
 - 💡 PIN-Schutz für Pakete, die von einer automatischen Sammel-Aktualisierung ausgenommen werden sollen
 
-<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/7141c7d9-9eb6-4467-8b1b-f387b45254eb" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7cf2641c-148e-43ae-9ebc-25eca669bba3" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/de31f36d-6fd6-4636-b268-81936368288f" />
 
 ### Inventar
 - Hardware- und Software-Inventarisierung des lokalen Rechners — ganz ohne vorherige Agent-Installation
 - Erstellung eines Inventarisierungs-Agenten (siehe [DATEXTAgent](#-datextagent)) zur Verteilung im lokalen Netzwerk und zentrales Sammeln von Systeminformationen in einer verschlüsselten .json-Datei. Auswertung der gesammelten Geräteinformationen.
 - Export nach PDF, XLSX, CSV, JSON
 
-<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/19742715-d5be-4342-9f20-7c5284205e05" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/8b253484-bf84-4d04-a955-593c81f3f9da" />
 
 ---
 
