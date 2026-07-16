@@ -30,8 +30,7 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - 💡 *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol direkt an Ping, Traceroute, DNS-Auflösung oder Port-Scan übergeben — ohne sie manuell abzutippen
 
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/fbb1054d-b0f3-4428-bbbd-b16f44546b98" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/1a1d3b1a-8fb2-4db9-9197-74b950678545" />
-
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/374594d9-8324-4da3-9248-f0946cd46543" />
 
 ### System Informationen
 - **System-Health** — Ampel-Bewertung von Hardware, Sicherheit, Speicherplatz, Netzwerk und Ereignissen; schnellster Weg zur Ersteinschätzung
