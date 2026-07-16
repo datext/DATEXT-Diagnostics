@@ -77,7 +77,7 @@ Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die 
 - Paket-Mitschnitt via PKTMON (direkt über den Windows-Kernel, ganz ohne Drittanbieter-Treiber) oder NetSH-Traces (ETW-basiert, häufig vom Microsoft-Support angefordert)
 - Konvertierung der Mitschnitte von .etl nach .pcap zur Auswertung via WireShark
 
-<img width="1324" height="762" alt="image" src="https://github.com/user-attachments/assets/35c34e8d-a6c0-4226-8cd0-199b30bcb075" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/c93510c4-c6a3-4b1e-90d1-70d83d0b4e48" />
 
 ### Performance
 - Messung der Internet-Bandbreite mit dem <a href="https://www.speedtest.net/apps/cli" target="_blank">Ookla Speedtest CLI</a> (Download, Upload, Ping, Jitter, Paketverlust). Erfordert Internetzugriff auf Port TCP 8080 für die Bandbreitenmessung!
