@@ -27,7 +27,7 @@ DATEXT Diagnostics ist eine umfassende Windows-Diagnoseanwendung die Systemadmin
 Der oberste Menüpunkt und zugleich Startbildschirm der Anwendung — fasst die beim Programmstart automatisch ermittelten Kernwerte des Systems zusammen, bevor überhaupt ein einzelnes Werkzeug aufgerufen wird.
 - Anzeige relevanter lokaler Systeminformationen (System, Energie, Ressourcen, Festplatten, Netzwerk, IT-Sicherheit, Internet) mit farblich codierten Badges zur schnellen Übersicht
 - Ermittlung und visuelle Anzeige von erkanntem CG-NAT-ISP-Anschluss und/oder erkannter aktiver VPN-Verbindung
-- 💡 *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol direkt an Ping, Traceroute, DNS-Auflösung oder Port-Scan übergeben — ohne sie manuell abzutippen
+- 💡 *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol direkt an Ping, Traceroute, DNS-Auflösung oder Port-Scan übergeben — ohne sie manuell abzutippen. Bei erkannten Wortmann Systemen kann die Seriennummer an die Webseite zur Wortmann Seriennummernsuche übergeben werden (Seitenaufruf und Seriennummer über Zwischenablage einfügen).
 
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/fbb1054d-b0f3-4428-bbbd-b16f44546b98" />
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/374594d9-8324-4da3-9248-f0946cd46543" />
