@@ -3,6 +3,10 @@
 Alle nennenswerten Änderungen an DATEXT Diagnostics werden in dieser Datei dokumentiert.
 Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
+## [0.99.11.13] - 2026-09-29
+### Fixed
+- **SystemOverviewDialog (Übersicht)**: Die Erkennung der CPU Cores unter virtualisierten Instanzen wurde korrigiert. Die Anzahl der vCores ist jetzt korrekt
+
 ## [0.99.11.11] - 2026-07-14
 Neuer Troubleshooting Dialog für Windows Komponenten-Check, Windows Update Prüfung, TCP Verbindungsprobleme und diverse System-Werkzeuge.
 
