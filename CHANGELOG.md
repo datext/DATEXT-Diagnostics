@@ -3,6 +3,22 @@
 Alle nennenswerten Änderungen an DATEXT Diagnostics werden in dieser Datei dokumentiert.
 Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
+## [0.99.12.02] - 2026-10-09
+### Added
+- **DATEXTAgent 1.1.2**: Neu gebaut und signiert, in Diagnostics eingebettet. Enthält die neue Gruppenrichtlinien-Logik des Inventars (lokaler Cache zuerst, Weg zum DC, Felder `gpoSource` und `dcPath`, siehe „Changed“). Der Agent kann nicht nachladen: Bei VPN wartet er wie bei lokalem DC bis zu 90 s und liefert bei Zeitüberschreitung die lokalen Daten. Agent-Inventare von 1.1.1 bleiben lesbar.
+
+### Changed
+- **Inventar – Gruppenrichtlinien**: Die angewendeten Computer-GPOs werden zuerst aus dem lokalen Cache gelesen (`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\History`): sofort, ohne Netz, auch bei Rechnern ohne Verbindung zum Domänencontroller. Danach wird der Weg zum DC geprüft (DNS, TCP 389, Schnittstelle bzw. Subnetz): **lokal** → `gpresult` liefert die frischen Daten samt Sicherheitsgruppen; **nur über VPN** (Tunnel-/PPP-Schnittstelle oder bekannter VPN-Adaptername) → die lokalen Daten erscheinen sofort mit dem Hinweis „Abfrage beim DC läuft“, `gpresult` läuft bis zu 180 s im Hintergrund und aktualisiert die Anzeige danach selbst (der geöffnete Reiter bleibt erhalten); **nicht erreichbar** → nur lokale Daten mit Hinweis auf den Stand des letzten Refresh. Liefert `gpresult` nichts, bleiben die lokalen Daten, und es steht eine Warnung im Inventar; vorher fehlten die GPOs in diesem Fall ganz. Im Agent (kein Nachladen möglich) wird bei VPN wie bei lokalem DC bis zu 90 s gewartet. Neue Felder im Inventar: `gpoSource` (Registry/gpresult) und `dcPath` (Lokal/VPN/Nicht erreichbar). Außerdem wird bei allen gestarteten Werkzeugen die Standardeingabe geschlossen (ein GUI-Prozess hat keine Konsole).
+
+---
+## [0.99.12.01] - 2026-10-08
+### Added
+- **DATEXTAgent 1.1.1**: Der signierte Agent ist in Diagnostics eingebettet (`DATEXTAgent\bin\Release\…\publish\win-x64\DATEXTAgent.exe` → `Resources\DATEXTAgent.exe`). Agent 1.1 richtet die Firewall selbst ein, deshalb entfällt die Sperre der täglichen und wöchentlichen Bereitstellung. 1.1.1 enthält zusätzlich die geänderte Sicherheitsprüfung des Inventars (siehe „Changed“).
+
+### Changed
+- **Lokale Inventarisierung – Statusanzeige**: Während der Erfassung zeigt die Statuszeile, welche Bereiche noch laufen, und die verstrichene Zeit (z. B. „Schritt 12 von 13 · läuft noch: Sicherheit · 47 s“). Vorher wirkte ein langsamer letzter Bereich wie ein Hänger.
+- **PDF-Berichte aller Dialoge**: E-Mail-Check, E-Mail-/Header-Analyse, DNS, Routing, DHCP, Geräte-Scan, Verbindungen, Netzwerk-Analyse, Active Directory, Gruppenrichtlinien, System-Health, UEFI, Software, Ereignislog, Autorun, Winget, MS-SQL, Speedtests und die Log-Dialoge (Ping, Traceroute, Port-Scan, Pktmon, Netsh, Troubleshooting) nutzen die Bausteine des Inventar-Berichts (`InventoryPdfExporter.ExportReport/ExportLogReport`: Titelblock, zweispaltige Werte, Tabellen, Bewertungsblöcke). `ExportService.ExportDiagnosticToPdfWithHeader` hat keine Aufrufer mehr.
+
 ## [0.99.12.00] - 2026-10-05
 ### Added
 - **Geräte-Scan / mDNS**: Die mDNS-Suche fragt nicht mehr nur `ANY local.` ab, auf das viele Geräte nicht antworten, sondern zusätzlich das Standard-Diensteverzeichnis (`_services._dns-sd._udp.local`), die PTR-Einträge der wichtigen Diensttypen (mit einmaligem Nachlauf für gemeldete Typen) und `_device-info._tcp.local`. Aus den Diensten je Gerät wird der Gerätetyp abgeleitet: `_ipp`/`_ipps`/`_printer`/`_pdl-datastream` → Drucker, `_googlecast` → Chromecast/Google TV, `_airplay` → Apple TV, `_raop` → AirPlay-Lautsprecher, `_hap`/`_homekit` → HomeKit, `_smb`/`_afpovertcp`/`_nfs` → NAS/Dateiserver. Bei Apple-Geräten liefert `_device-info` (TXT `model=`) das Modell, z. B. "MacBookPro18,3". Die Dienste erscheinen als `mDNS:ipp`, `mDNS:googlecast` usw. in der Dienstespalte; Geräte ohne Hostnamen übernehmen den Instanznamen. Hörzeit 3 → 4 s. Der mDNS-Typ ersetzt eine bestehende Erkennung nur, wenn der Typ unbekannt ist oder ein Apple-Modell gemeldet wurde.
