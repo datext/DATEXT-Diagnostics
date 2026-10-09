@@ -34,7 +34,7 @@ Aktuell gibt es eine selbstextrahierende EXE die ohne installierte .NET-Laufzeit
 
 | Variante | Beschreibung |
 |---|---|
-| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Beim ersten Start wird die Laufzeit nach `%LocalAppData%\DATEXT-Diagnostics\Runtime\<Version>` entpackt. Geeignet für Admin-Stick und einmalige Einsätze. |
+| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Beim ersten Start wird die Laufzeit nach `%TEMP%\.net\DATEXT-Diagnostics\<Hashwert>` entpackt. Geeignet für Admin-Stick und einmalige Einsätze. |
 
 Die Programmdatei ist digital signiert.
 
