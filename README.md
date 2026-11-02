@@ -170,7 +170,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Header-Analyse:** Routing-Pfad mit Zeitstempeln je Hop, SPF-/DKIM-/DMARC-/BIMI-Prüfung, Spam-Score
 - **E-Mail-Domain-Analyse:** MX, SPF, DKIM, DMARC, BIMI, Blacklist-Prüfung und Auswertung der Zustellbarkeit zwischen zwei Domains
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/bf53d8c3-a7a6-4c21-9fea-e5a59d1cd9c0" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/7e313995-90b0-4769-a548-e9b210bf2829" />
 
 </details>
 
@@ -183,7 +183,10 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Speichern verschlüsselt oder als JSON, ausführlicher PDF-Bericht
 - **Agent-Verwaltung:** Erstellung und Verteilung des DATEXTAgent, zentrales Sammeln und Auswerten (siehe [DATEXTAgent](#datextagent))
 
-<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/30258e12-5745-4d09-9843-94780e976e58" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/bc633091-1767-4cb1-8338-2d1384769f17" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/d638b847-bc9d-42e0-a5aa-b740d23c5749" />
+
+
 
 </details>
 
