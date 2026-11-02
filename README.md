@@ -20,11 +20,14 @@
 DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Windows-Rechnern und im Netzwerk ständig braucht, in einer Anwendung. Ohne Kommandozeile und ohne Skripte.
 
 - **Übersicht und Bewertung:** Systemzustand, Sicherheit und Netzwerk auf einen Blick, mit farbiger Bewertung
-- **Netzwerk:** Geräte-Scan, Ping, Traceroute, DNS, Port-Scan, DHCP-Discovery, Verbindungsanalyse
+- **System:** System-Health,UEFI-Boot-Zertifikat, Autostart-Analyse, Ereignislog-Viewer, installierte Software, Winget-Paketverwaltung, System-Verwaltung, Troubleshooting-Werkzeuge
+- **Netzwerk:** Geräte-Scan, Ping & Latenz, Traceroute, IP & DNS Analyse, Port-Scan, Verbindungsanalyse, DHCP-Discovery, Firewall-Log-Auswertung
 - **E-Mail:** Verbindungs- und Sicherheitsprüfung von Mailservern, Domain- und Header-Analyse
 - **Server & Dienste:** Active Directory (Objektsuche, Gruppenrichtlinien, Sicherheits- und Zustandsanalyse), Analyse von IIS (Websites, FTP, Protokolle), Hyper-V (VMs, Datenträger, Speicherorte), MS-SQL (Datenbankanalyse)
+- **Packet Capture:** Mitschnitt über PKTMON oder netsh trace, Konvertierung nach .pcap
+- **Speedtests:** Internet-Speedtest, LAN-Speedtest, Disk-Speedtest
+- **Email & Domain:** Verbindungs- und Sicherheitsprüfung von Mailservern, Domain- und Header-Analyse
 - **Inventar:** Hardware und Software lokal erfassen und bewerten, auf Wunsch zentral über den DATEXTAgent
-- **Messungen:** Internet-, LAN- und Festplattengeschwindigkeit
 - **Einheitliche PDF-Berichte** aus allen Bereichen
 
 ---
@@ -74,7 +77,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/374594d9-8324-4da3-9248-f0946cd46543" />
 
 <details>
-<summary><b>System-Informationen</b></summary>
+<summary><b>System</b></summary>
 
 - **System-Health:** Ampel-Bewertung von Hardware, Sicherheit, Speicherplatz, Netzwerk und Ereignissen, der schnellste Weg zur Ersteinschätzung
 - **UEFI-Boot-Zertifikat:** Prüfung der Zertifikatsumstellung 2011 → 2023, mit Erkennung physischer oder virtueller Maschine und passender Handlungsempfehlung
@@ -83,11 +86,15 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
   - *Kontext-Korrelation:* verwandte Ereignisse im Umkreis von ±5 Minuten um einen Eintrag
   - *Anonymisierter Export* für Support-Tickets
 - **Installierte Software** mit Such- und Exportfunktion
+- **Winget-Pakete:** Aktualisierung installierter Anwendungen über Winget, Suche und Installation von Anwendungen, PIN-Schutz für Pakete, die von der Sammel-Aktualisierung ausgenommen werden sollen
 - **System-Verwaltungsprogramme** im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
 - **Troubleshooting:** Komponentenprüfung (DISM / SFC), Windows-Update-Reparatur, Netzwerk-Resets und weitere Werkzeuge
 
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/96ea53d2-8351-4bdc-b790-295ece8ac79f" />
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/b8b0505c-cc90-44bf-9ab1-bc6b9ac5f85e" />
+
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7cf2641c-148e-43ae-9ebc-25eca669bba3" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/de31f36d-6fd6-4636-b268-81936368288f" />
 
 </details>
 
@@ -112,52 +119,29 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 </details>
 
 <details>
-<summary><b>E-Mail und Domäne</b></summary>
+<summary><b>Server & Dienste</b></summary>
 
-- **E-Mail-Check:** Ermittelt den zuständigen Server, prüft Verbindung, TLS, Zertifikat und Anmeldeverfahren, testet alle Ports (587, 465, 25) auf einmal und versendet auf Wunsch eine Testmail, bei Microsoft 365 per Anmeldung im Browser über Microsoft Graph (SMTP AUTH ist dort meist deaktiviert). Die Sicherheitsanalyse nutzt dieselbe DNS-Auswertung wie die E-Mail-Analyse und bewertet SPF, DMARC, DKIM, MX, MTA-STS, TLS-RPT, PTR, Blacklist, TLS und DANE. Vollständige Protokollmitschnitte.
-- **E-Mail-Domain-Analyse:** MX, SPF, DKIM, DMARC, BIMI, Blacklist-Prüfung und Auswertung der Zustellbarkeit zwischen zwei Domains
-- **Header-Analyse:** Routing-Pfad mit Zeitstempeln je Hop, SPF-/DKIM-/DMARC-/BIMI-Prüfung, Spam-Score
-
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/bf53d8c3-a7a6-4c21-9fea-e5a59d1cd9c0" />
-
-</details>
-
-<details>
-<summary><b>Active Directory</b></summary>
-
-- Suche nach Benutzern und Computern (mit installiertem RSAT), automatische Domain-Controller-Erkennung, Abgleich mit dem Netzwerk-Scan
-- Analyse der Gruppenrichtlinien inkl. Verarbeitungsreihenfolge und Vererbung: zeigt, warum eine erwartete Richtlinie auf einem Rechner nicht ankommt
+- **AD-Suche:** Suche nach Benutzern und Computern (mit installiertem RSAT), automatische Domain-Controller-Erkennung, Abgleich mit dem Netzwerk-Scan
+- **Gruppenrichtlinien:** Analyse der Gruppenrichtlinien inkl. Verarbeitungsreihenfolge und Vererbung: zeigt, warum eine erwartete Richtlinie auf einem Rechner nicht ankommt
 - **AD-Sicherheit & Zustand:** bewertet ein Active Directory rein lesend und direkt per LDAP, ohne RSAT und ohne PowerShell, mit der aktuellen Anmeldung oder gegen eine fremde Domäne mit eigenen Zugangsdaten. Die Befunde mit Stufe, Objekt und Empfehlung stammen aus vier Bereichen:
   - *Konten und Privilegien:* inaktive Konten, Kennwortprobleme, Kerberos-Risiken (Kerberoasting, AS-REP, Delegierung), `krbtgt`, LAPS, veraltete Betriebssysteme, verschachtelte Admin-Gruppen
   - *Domäne und Richtlinien:* Funktionsebenen, Kennwort- und Sperrrichtlinie, FSMO-Rollen, Vertrauensstellungen, Papierkorb, Standorte und Subnetze
   - *Domänencontroller:* Ports, DNS, Zeitabweichung, SYSVOL/DFSR, Replikation je Partition, LDAP-Signierung, Channel Binding, SMB1
   - *Sicherheitsereignisse:* Kontosperrungen und Fehlanmeldungen mit Einschätzung (Password Spraying, Brute-Force). Ist ein Controller nicht lesbar, nennt der Dialog die Ursache (Namensauflösung, RPC-Ports, Berechtigung).
-
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/39984655-d296-4e49-af89-422742c661ef" />
-
-</details>
-
-<details>
-<summary><b>Server & Dienste</b></summary>
-
+- **MS-SQL-Analyse:**
+  - Instanz-Erkennung über Registry, SQL Browser und Broadcast
+  - Analyse mit Windows-Authentifizierung und Impersonation
+  - Neben der Erreichbarkeit auch Aktivität (laufende Abfragen, Sperren), Performance-Kennzahlen (u. a. Page Life Expectancy), Konfiguration, Sicherheitsprüfung, Backups, Indizes und Agent-Jobs
 - **IIS-Analyse:** liest die `applicationHost.config` (auch eine kopierte Datei) und bewertet Sites, Bindings, Zertifikate, Anwendungspools und FTP-Sites (SSL-Richtlinie, Authentifizierung, Autorisierung). Auf dem lokalen Server kommen Laufzeitstatus der Sites, Pools und Dienste dazu. Die Auswertung der Web- und FTP-Protokolle zeigt auffällige Absender (Brute-Force, Scanner, Sondierung) und die langsamsten und fehlerhaftesten URLs je Website; eine Sperrliste fasst Angreifer-Netze für die Firewall zusammen.
 - **Hyper-V-Analyse:** bewertet virtuelle Maschinen, Datenträger (auch VHD-Sets, geteilte Datenträger und Pass-Through), Prüfpunkte und Speicherorte, einschließlich Cluster Shared Volumes und SMB-Freigaben, mit freiem Platz und möglichem Wachstum dynamischer Datenträger.
 
-</details>
-
-<details>
-<summary><b>MS-SQL</b></summary>
-
-- Instanz-Erkennung über Registry, SQL Browser und Broadcast
-- Analyse mit Windows-Authentifizierung und Impersonation
-- Neben der Erreichbarkeit auch Aktivität (laufende Abfragen, Sperren), Performance-Kennzahlen (u. a. Page Life Expectancy), Konfiguration, Sicherheitsprüfung, Backups, Indizes und Agent-Jobs
-
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/39984655-d296-4e49-af89-422742c661ef" />
 <img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/6ee1c87b-3652-4f8e-9882-12bccc3fcee3" />
 
 </details>
 
 <details>
-<summary><b>Paketmitschnitt</b></summary>
+<summary><b>Packet Capture</b></summary>
 
 - Mitschnitt über **PKTMON** (direkt über den Windows-Kernel, ohne Drittanbieter-Treiber) oder **netsh trace** (ETW-basiert, wird häufig vom Microsoft-Support angefordert)
 - Konvertierung von .etl nach .pcap zur Auswertung mit Wireshark
@@ -167,10 +151,10 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 </details>
 
 <details>
-<summary><b>Performance</b></summary>
+<summary><b>Speedtests</b></summary>
 
 - **Internet-Speedtest** mit dem Ookla Speedtest CLI: Live-Messung (Download, Upload, Ping, Jitter, Paketverlust, Latenz unter Last), Serverauswahl, Ergebnislink und Messverlauf mit CSV-Export. Benötigt Internetzugriff auf TCP 8080.
-- **Transferzeiten:** Berechnung für Standardgrößen oder eigene Bandbreiten und Datenmengen
+  - *Transferzeiten* (im Internet-Speedtest): Berechnung für Standardgrößen oder eigene Bandbreiten und Datenmengen
 - **Netzwerk-Speedtest (LAN):** Messung zu einer SMB-Freigabe mit automatischer Adapterwahl, Latenz, Min/Max über mehrere Läufe und Bewertung relativ zur Linkgeschwindigkeit, praktisch zum Eingrenzen langsamer Dateiübertragungen
 - **Disk-Speedtest** mit WinSAT und/oder DiskSpd (sequenziell und 4K-Random, inkl. IOPS)
 
@@ -179,14 +163,13 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 </details>
 
 <details>
-<summary><b>Updates</b></summary>
+<summary><b>E-Mail & Domain</b></summary>
 
-- Aktualisierung installierter Anwendungen über Winget
-- Suche und Installation von Anwendungen
-- PIN-Schutz für Pakete, die von der Sammel-Aktualisierung ausgenommen werden sollen
+- **E-Mail-Check:** Ermittelt den zuständigen Server, prüft Verbindung, TLS, Zertifikat und Anmeldeverfahren, testet alle Ports (587, 465, 25) auf einmal und versendet auf Wunsch eine Testmail, bei Microsoft 365 per Anmeldung im Browser über Microsoft Graph (SMTP AUTH ist dort meist deaktiviert). Die Sicherheitsanalyse nutzt dieselbe DNS-Auswertung wie die E-Mail-Analyse und bewertet SPF, DMARC, DKIM, MX, MTA-STS, TLS-RPT, PTR, Blacklist, TLS und DANE. Vollständige Protokollmitschnitte.
+- **Header-Analyse:** Routing-Pfad mit Zeitstempeln je Hop, SPF-/DKIM-/DMARC-/BIMI-Prüfung, Spam-Score
+- **E-Mail-Domain-Analyse:** MX, SPF, DKIM, DMARC, BIMI, Blacklist-Prüfung und Auswertung der Zustellbarkeit zwischen zwei Domains
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7cf2641c-148e-43ae-9ebc-25eca669bba3" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/de31f36d-6fd6-4636-b268-81936368288f" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/bf53d8c3-a7a6-4c21-9fea-e5a59d1cd9c0" />
 
 </details>
 
