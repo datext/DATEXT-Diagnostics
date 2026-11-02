@@ -159,7 +159,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Netzwerk-Speedtest (LAN):** Messung zu einer SMB-Freigabe mit automatischer Adapterwahl, Latenz, Min/Max über mehrere Läufe und Bewertung relativ zur Linkgeschwindigkeit, praktisch zum Eingrenzen langsamer Dateiübertragungen
 - **Disk-Speedtest** mit WinSAT und/oder DiskSpd (sequenziell und 4K-Random, inkl. IOPS)
 
-<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/1aabe677-a605-4e20-aec1-c480d44fbcc9" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/d303212e-15f8-497b-ae67-73b0a12d279a" />
 
 </details>
 
