@@ -73,8 +73,10 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Bewertung:** Auf Wunsch wird das System inventarisiert und bewertet, Probleme stehen zuerst
 - *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol an Ping, Traceroute, DNS oder Port-Scan übergeben. Bei Wortmann-Systemen kann die Seriennummer an die Seriennummernsuche übergeben werden.
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/fbb1054d-b0f3-4428-bbbd-b16f44546b98" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/374594d9-8324-4da3-9248-f0946cd46543" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/028ae71f-b873-41b3-a8df-cc483a90779b" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/f17ce5ee-11c5-43e6-8263-2a418a67a776" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/6959a59b-0af5-4bc3-8964-0b28fc26444f" />
+
 
 <details>
 <summary><b>System</b></summary>
@@ -90,11 +92,9 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **System-Verwaltungsprogramme** im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
 - **Troubleshooting:** Komponentenprüfung (DISM / SFC), Windows-Update-Reparatur, Netzwerk-Resets und weitere Werkzeuge
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/96ea53d2-8351-4bdc-b790-295ece8ac79f" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/b8b0505c-cc90-44bf-9ab1-bc6b9ac5f85e" />
-
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7cf2641c-148e-43ae-9ebc-25eca669bba3" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/de31f36d-6fd6-4636-b268-81936368288f" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/bc8e7d92-4280-435f-864a-4ec4754ca041" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/deb75925-1d51-451c-bccf-beaedf0307dc" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/0bd3192e-2e24-48dc-9e40-05b8cd7be20a" />
 
 </details>
 
@@ -110,11 +110,11 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **DHCP-Discovery** für IPv4 und IPv6: erkennt alle antwortenden DHCP-Server und deckt Rogue-DHCP auf
 - **Firewall-Log-Auswertung:** liest Logs der Securepoint UTM, von pfSense/OPNsense, Linux-Diensten (sshd, fail2ban, Postfix, Dovecot) und Schlüssel=Wert-Logs (z. B. FortiGate, Sophos) oder eine reine IP-Liste. Die Quelladressen gesperrter oder fehlgeschlagener Anmeldungen werden nach Betreiber (ASN) und Netz (BGP-Präfix) gruppiert; daraus entsteht eine Sperrliste für die Firewall. VPN-Sitzungen werden mit Beginn und Ende erfasst.
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/d1833c8e-1502-43b9-b3f1-6fbb31a02126" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/e46d7dae-6f7e-401b-9a37-3e1e592a85bc" />
 
 **Verbindungsanalyse mit Risikobewertung:** Jede aktive TCP-/UDP-Verbindung wird dem auslösenden Prozess zugeordnet (inkl. Authenticode-Prüfung). Auffällige Ziel-IPs werden gegen VirusTotal und Shodan abgeglichen.
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/f23955bd-87d1-4ba6-b872-9ed2200aa92a" />
+<img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/1a55f012-8d4a-486e-be95-76ed0638150b" />
 
 </details>
 
@@ -135,8 +135,9 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **IIS-Analyse:** liest die `applicationHost.config` (auch eine kopierte Datei) und bewertet Sites, Bindings, Zertifikate, Anwendungspools und FTP-Sites (SSL-Richtlinie, Authentifizierung, Autorisierung). Auf dem lokalen Server kommen Laufzeitstatus der Sites, Pools und Dienste dazu. Die Auswertung der Web- und FTP-Protokolle zeigt auffällige Absender (Brute-Force, Scanner, Sondierung) und die langsamsten und fehlerhaftesten URLs je Website; eine Sperrliste fasst Angreifer-Netze für die Firewall zusammen.
 - **Hyper-V-Analyse:** bewertet virtuelle Maschinen, Datenträger (auch VHD-Sets, geteilte Datenträger und Pass-Through), Prüfpunkte und Speicherorte, einschließlich Cluster Shared Volumes und SMB-Freigaben, mit freiem Platz und möglichem Wachstum dynamischer Datenträger.
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/39984655-d296-4e49-af89-422742c661ef" />
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/6ee1c87b-3652-4f8e-9882-12bccc3fcee3" />
+<img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/6243efff-0bae-499e-be9d-8bb8e06c0dae" />
+<img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/8003621c-fd95-49ad-981a-81b499f9d90a" />
+<img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/65016ec3-ca91-4a70-a441-d7324dd58f80" />
 
 </details>
 
@@ -146,7 +147,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Mitschnitt über **PKTMON** (direkt über den Windows-Kernel, ohne Drittanbieter-Treiber) oder **netsh trace** (ETW-basiert, wird häufig vom Microsoft-Support angefordert)
 - Konvertierung von .etl nach .pcap zur Auswertung mit Wireshark
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/c93510c4-c6a3-4b1e-90d1-70d83d0b4e48" />
+<img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/5cf73301-31ca-4ced-ac3d-9e922a7e178d" />
 
 </details>
 
@@ -158,7 +159,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Netzwerk-Speedtest (LAN):** Messung zu einer SMB-Freigabe mit automatischer Adapterwahl, Latenz, Min/Max über mehrere Läufe und Bewertung relativ zur Linkgeschwindigkeit, praktisch zum Eingrenzen langsamer Dateiübertragungen
 - **Disk-Speedtest** mit WinSAT und/oder DiskSpd (sequenziell und 4K-Random, inkl. IOPS)
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7b0f4a76-2052-4359-8db9-88abdaf0afe7" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/1aabe677-a605-4e20-aec1-c480d44fbcc9" />
 
 </details>
 
@@ -182,7 +183,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Speichern verschlüsselt oder als JSON, ausführlicher PDF-Bericht
 - **Agent-Verwaltung:** Erstellung und Verteilung des DATEXTAgent, zentrales Sammeln und Auswerten (siehe [DATEXTAgent](#datextagent))
 
-<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/8b253484-bf84-4d04-a955-593c81f3f9da" />
+<img width="1639" height="982" alt="image" src="https://github.com/user-attachments/assets/30258e12-5745-4d09-9843-94780e976e58" />
 
 </details>
 
