@@ -1,3 +1,4 @@
+<div align="center">
 
 # DATEXT Diagnostics
 
@@ -21,7 +22,7 @@ DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Window
 - **Übersicht und Bewertung:** Systemzustand, Sicherheit und Netzwerk auf einen Blick, mit farbiger Bewertung
 - **Netzwerk:** Geräte-Scan, Ping, Traceroute, DNS, Port-Scan, DHCP-Discovery, Verbindungsanalyse
 - **E-Mail:** Verbindungs- und Sicherheitsprüfung von Mailservern, Domain- und Header-Analyse
-- **Active Directory und MS-SQL:** Suche, Gruppenrichtlinien, Datenbankanalyse
+- **Server & Dienste:** Active Directory (Objektsuche, Gruppenrichtlinien, Sicherheits- und Zustandsanalyse), Analyse von IIS (Websites, FTP, Protokolle), Hyper-V (VMs, Datenträger, Speicherorte), MS-SQL (Datenbankanalyse)
 - **Inventar:** Hardware und Software lokal erfassen und bewerten, auf Wunsch zentral über den DATEXTAgent
 - **Messungen:** Internet-, LAN- und Festplattengeschwindigkeit
 - **Einheitliche PDF-Berichte** aus allen Bereichen
@@ -30,11 +31,11 @@ DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Window
 
 ## Installation
 
-Aktuell gibt es eine selbstextrahierende EXE die ohne installierte .NET-Laufzeit auskommt.
+Es gibt eine portable EXE. Sie kommen ohne installierte .NET 8 Laufzeit aus.
 
 | Variante | Beschreibung |
 |---|---|
-| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Beim ersten Start wird die Laufzeit nach `%TEMP%\.net\DATEXT-Diagnostics\<Hashwert>` entpackt. Geeignet für Admin-Stick und einmalige Einsätze. |
+| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Beim Start entpackt .NET die Laufzeit nach `%TEMP%\.net\DATEXT-Diagnostics\<Hashwert>` (Standardverhalten von Single-File-Anwendungen). Geeignet für Admin-Stick und einmalige Einsätze. |
 
 Die Programmdatei ist digital signiert.
 
@@ -54,7 +55,7 @@ Die Programmdatei ist digital signiert.
 |---|---|---|
 | Ookla Speedtest CLI | Internet-Speedtest | Lässt sich aus der Anwendung installieren |
 | DiskSpd | Festplattentest mit IOPS | Lässt sich aus der Anwendung installieren |
-| RSAT (AD-Tools) | Active-Directory-Abfragen | Windows-Feature |
+| RSAT (AD-Tools) | Benutzer- und Computersuche im Active Directory (die AD-Analyse „AD-Sicherheit & Zustand“ braucht kein RSAT) | Windows-Feature |
 | DATEXTAgent | Remote-Inventarisierung | Wird aus der Anwendung erstellt und verteilt |
 
 ---
@@ -69,9 +70,8 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Bewertung:** Auf Wunsch wird das System inventarisiert und bewertet, Probleme stehen zuerst
 - *Direkt-Aktionen:* IP-Adressen lassen sich per Symbol an Ping, Traceroute, DNS oder Port-Scan übergeben. Bei Wortmann-Systemen kann die Seriennummer an die Seriennummernsuche übergeben werden.
 
-<img width="1423" height="758" alt="image" src="https://github.com/user-attachments/assets/1f2f9d60-3eba-4ced-bd36-0c500064e4ea" />
-<img width="1423" height="758" alt="image" src="https://github.com/user-attachments/assets/af007db6-dfe6-4f3f-8e2a-ac7c505810b2" />
-
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/fbb1054d-b0f3-4428-bbbd-b16f44546b98" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/374594d9-8324-4da3-9248-f0946cd46543" />
 
 <details>
 <summary><b>System-Informationen</b></summary>
@@ -79,45 +79,46 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **System-Health:** Ampel-Bewertung von Hardware, Sicherheit, Speicherplatz, Netzwerk und Ereignissen, der schnellste Weg zur Ersteinschätzung
 - **UEFI-Boot-Zertifikat:** Prüfung der Zertifikatsumstellung 2011 → 2023, mit Erkennung physischer oder virtueller Maschine und passender Handlungsempfehlung
 - **Autorun-Analyse:** Registry-Autostart, geplante Aufgaben, Autostart-Ordner und automatisch startende Dienste, mit Signaturprüfung und Risikobewertung
-- **Ereignislog-Viewer** mit Schnellfiltern für gängige Probleme
+- **Ereignislog-Viewer** mit Schnellfiltern für gängige Probleme, nach Themen gruppiert und einklappbar (Anwendungen, System & Stabilität, Sicherheit & Konten, Netzwerk, Active Directory; rollenabhängig Hyper-V, Cluster, SQL Server und IIS), dazu Kontextmenü zum Kopieren einzelner Angaben
   - *Kontext-Korrelation:* verwandte Ereignisse im Umkreis von ±5 Minuten um einen Eintrag
   - *Anonymisierter Export* für Support-Tickets
 - **Installierte Software** mit Such- und Exportfunktion
 - **System-Verwaltungsprogramme** im Schnellzugriff (services.msc, devmgmt.msc, compmgmt.msc, msconfig u. v. m.)
 - **Troubleshooting:** Komponentenprüfung (DISM / SFC), Windows-Update-Reparatur, Netzwerk-Resets und weitere Werkzeuge
 
-
-<img width="1423" height="758" alt="image" src="https://github.com/user-attachments/assets/4b0bfc02-5e67-49ec-8b21-0b4ba4601fd2" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/96ea53d2-8351-4bdc-b790-295ece8ac79f" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/b8b0505c-cc90-44bf-9ab1-bc6b9ac5f85e" />
 
 </details>
 
 <details>
 <summary><b>Netzwerk</b></summary>
 
-- **Geräte-Scan** mit Typ-Erkennung über Ping, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP, WS-Discovery und SNMP. Zusätzlich werden Dienste-Banner (HTTP/HTTPS, SSH, FTP) gelesen und Windows-Informationen über SMB ermittelt, ohne Anmeldung. Dazu eine Topologie-Ansicht.
+- **Geräte-Scan** mit Typ-Erkennung über Ping, ARP, DNS, NetBIOS, LLMNR, mDNS, SSDP, WS-Discovery und SNMP. Zusätzlich werden Dienste-Banner (HTTP/HTTPS, SSH, FTP) gelesen und Windows-Informationen über SMB ermittelt, ohne Anmeldung. Die Ergebnisse stehen in einer Liste mit Kacheln je Gerätetyp, Suchfeld und Kontextmenü; Geräte mit mehreren IP-Adressen werden zusammengefasst. Dazu eine Topologie-Ansicht, die Switches, Verbindungen und Endgeräte aus SNMP-Daten (LLDP, Bridge-MIB, STP) anordnet.
 - **Ping** mit fortlaufender Statistik, Jitter, Paketverlust und automatischer MTU-Erkennung
 - **Traceroute** mit Hop-für-Hop-Latenz, Reverse-DNS und Erkennung von CGNAT-/Doppel-NAT im Pfad
-- **DNS-Analyse:** A/AAAA/CNAME/NS/SOA/MX/TXT/SRV/PTR, DNSSEC und CAA, MTA-STS, TLS-RPT, SPF mit Zählung der DNS-Lookups, Propagation gegen mehrere öffentliche Server, IP-Zusatzinfos, Bewertung und Vergleich mit der letzten Abfrage
+- **IP & DNS Analyse:** A/AAAA/CNAME/NS/SOA/MX/TXT/SRV/PTR, DNSSEC und CAA, MTA-STS, TLS-RPT, SPF mit Zählung der DNS-Lookups, Propagation gegen mehrere öffentliche Server, IP-Zusatzinfos, Bewertung und Vergleich mit der letzten Abfrage; zusätzlich direkte Abfrage der autoritativen Nameserver, hängende CNAME/MX-Verweise, DNSSEC-Kette mit Signaturprüfung, SERVFAIL-Diagnose, TTL, Wildcard, Netz/AS per DNS und erkannte Dienste
 - **Port-Scan** mit Diensterkennung; unterscheidet geschlossen (abgelehnt) von gefiltert (Firewall)
 - **Netzwerk und Verbindungen:** Netzwerkkarten, Routing-Tabelle, Verbindungen, Netzwerk-Analyse, Netzwerklast und Diagnose
 - **DHCP-Discovery** für IPv4 und IPv6: erkennt alle antwortenden DHCP-Server und deckt Rogue-DHCP auf
+- **Firewall-Log-Auswertung:** liest Logs der Securepoint UTM, von pfSense/OPNsense, Linux-Diensten (sshd, fail2ban, Postfix, Dovecot) und Schlüssel=Wert-Logs (z. B. FortiGate, Sophos) oder eine reine IP-Liste. Die Quelladressen gesperrter oder fehlgeschlagener Anmeldungen werden nach Betreiber (ASN) und Netz (BGP-Präfix) gruppiert; daraus entsteht eine Sperrliste für die Firewall. VPN-Sitzungen werden mit Beginn und Ende erfasst.
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/f45092d0-1fa3-46fc-9a2f-59c6bd5e0b7c" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/d1833c8e-1502-43b9-b3f1-6fbb31a02126" />
 
 **Verbindungsanalyse mit Risikobewertung:** Jede aktive TCP-/UDP-Verbindung wird dem auslösenden Prozess zugeordnet (inkl. Authenticode-Prüfung). Auffällige Ziel-IPs werden gegen VirusTotal und Shodan abgeglichen.
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/a1b4bad6-5180-4bd0-ab38-30da1a6bde5a" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/f23955bd-87d1-4ba6-b872-9ed2200aa92a" />
 
 </details>
 
 <details>
 <summary><b>E-Mail und Domäne</b></summary>
 
-- **E-Mail-Check:** Ermittelt den zuständigen Server, prüft Verbindung, TLS, Zertifikat und Anmeldeverfahren, testet alle Ports (587, 465, 25) auf einmal und versendet auf Wunsch eine Testmail. Die Sicherheitsanalyse bewertet SPF, DMARC, DKIM, MX, PTR, Blacklist, TLS und DANE. Vollständige Protokollmitschnitte.
+- **E-Mail-Check:** Ermittelt den zuständigen Server, prüft Verbindung, TLS, Zertifikat und Anmeldeverfahren, testet alle Ports (587, 465, 25) auf einmal und versendet auf Wunsch eine Testmail, bei Microsoft 365 per Anmeldung im Browser über Microsoft Graph (SMTP AUTH ist dort meist deaktiviert). Die Sicherheitsanalyse nutzt dieselbe DNS-Auswertung wie die E-Mail-Analyse und bewertet SPF, DMARC, DKIM, MX, MTA-STS, TLS-RPT, PTR, Blacklist, TLS und DANE. Vollständige Protokollmitschnitte.
 - **E-Mail-Domain-Analyse:** MX, SPF, DKIM, DMARC, BIMI, Blacklist-Prüfung und Auswertung der Zustellbarkeit zwischen zwei Domains
 - **Header-Analyse:** Routing-Pfad mit Zeitstempeln je Hop, SPF-/DKIM-/DMARC-/BIMI-Prüfung, Spam-Score
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/b6dc0ac6-85a0-4a23-bb00-1700639e798e" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/bf53d8c3-a7a6-4c21-9fea-e5a59d1cd9c0" />
 
 </details>
 
@@ -126,8 +127,21 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 
 - Suche nach Benutzern und Computern (mit installiertem RSAT), automatische Domain-Controller-Erkennung, Abgleich mit dem Netzwerk-Scan
 - Analyse der Gruppenrichtlinien inkl. Verarbeitungsreihenfolge und Vererbung: zeigt, warum eine erwartete Richtlinie auf einem Rechner nicht ankommt
+- **AD-Sicherheit & Zustand:** bewertet ein Active Directory rein lesend und direkt per LDAP, ohne RSAT und ohne PowerShell, mit der aktuellen Anmeldung oder gegen eine fremde Domäne mit eigenen Zugangsdaten. Die Befunde mit Stufe, Objekt und Empfehlung stammen aus vier Bereichen:
+  - *Konten und Privilegien:* inaktive Konten, Kennwortprobleme, Kerberos-Risiken (Kerberoasting, AS-REP, Delegierung), `krbtgt`, LAPS, veraltete Betriebssysteme, verschachtelte Admin-Gruppen
+  - *Domäne und Richtlinien:* Funktionsebenen, Kennwort- und Sperrrichtlinie, FSMO-Rollen, Vertrauensstellungen, Papierkorb, Standorte und Subnetze
+  - *Domänencontroller:* Ports, DNS, Zeitabweichung, SYSVOL/DFSR, Replikation je Partition, LDAP-Signierung, Channel Binding, SMB1
+  - *Sicherheitsereignisse:* Kontosperrungen und Fehlanmeldungen mit Einschätzung (Password Spraying, Brute-Force). Ist ein Controller nicht lesbar, nennt der Dialog die Ursache (Namensauflösung, RPC-Ports, Berechtigung).
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/267474c7-37be-4309-83d2-f417e65c06b7" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/39984655-d296-4e49-af89-422742c661ef" />
+
+</details>
+
+<details>
+<summary><b>Server & Dienste</b></summary>
+
+- **IIS-Analyse:** liest die `applicationHost.config` (auch eine kopierte Datei) und bewertet Sites, Bindings, Zertifikate, Anwendungspools und FTP-Sites (SSL-Richtlinie, Authentifizierung, Autorisierung). Auf dem lokalen Server kommen Laufzeitstatus der Sites, Pools und Dienste dazu. Die Auswertung der Web- und FTP-Protokolle zeigt auffällige Absender (Brute-Force, Scanner, Sondierung) und die langsamsten und fehlerhaftesten URLs je Website; eine Sperrliste fasst Angreifer-Netze für die Firewall zusammen.
+- **Hyper-V-Analyse:** bewertet virtuelle Maschinen, Datenträger (auch VHD-Sets, geteilte Datenträger und Pass-Through), Prüfpunkte und Speicherorte, einschließlich Cluster Shared Volumes und SMB-Freigaben, mit freiem Platz und möglichem Wachstum dynamischer Datenträger.
 
 </details>
 
@@ -138,7 +152,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Analyse mit Windows-Authentifizierung und Impersonation
 - Neben der Erreichbarkeit auch Aktivität (laufende Abfragen, Sperren), Performance-Kennzahlen (u. a. Page Life Expectancy), Konfiguration, Sicherheitsprüfung, Backups, Indizes und Agent-Jobs
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/dc7d534c-5b37-480f-8a26-747c24d40ea8" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/6ee1c87b-3652-4f8e-9882-12bccc3fcee3" />
 
 </details>
 
@@ -148,7 +162,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Mitschnitt über **PKTMON** (direkt über den Windows-Kernel, ohne Drittanbieter-Treiber) oder **netsh trace** (ETW-basiert, wird häufig vom Microsoft-Support angefordert)
 - Konvertierung von .etl nach .pcap zur Auswertung mit Wireshark
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/bdd28c6a-6472-4cf0-b0f5-8f34d23e83af" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/c93510c4-c6a3-4b1e-90d1-70d83d0b4e48" />
 
 </details>
 
@@ -160,7 +174,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - **Netzwerk-Speedtest (LAN):** Messung zu einer SMB-Freigabe mit automatischer Adapterwahl, Latenz, Min/Max über mehrere Läufe und Bewertung relativ zur Linkgeschwindigkeit, praktisch zum Eingrenzen langsamer Dateiübertragungen
 - **Disk-Speedtest** mit WinSAT und/oder DiskSpd (sequenziell und 4K-Random, inkl. IOPS)
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/3516f320-4576-4d0e-a7f2-d8a1d9632abe" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7b0f4a76-2052-4359-8db9-88abdaf0afe7" />
 
 </details>
 
@@ -171,7 +185,8 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Suche und Installation von Anwendungen
 - PIN-Schutz für Pakete, die von der Sammel-Aktualisierung ausgenommen werden sollen
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/5b53d21e-755e-4ce5-9a63-71f8cc429a33" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/7cf2641c-148e-43ae-9ebc-25eca669bba3" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/de31f36d-6fd6-4636-b268-81936368288f" />
 
 </details>
 
@@ -184,7 +199,7 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 - Speichern verschlüsselt oder als JSON, ausführlicher PDF-Bericht
 - **Agent-Verwaltung:** Erstellung und Verteilung des DATEXTAgent, zentrales Sammeln und Auswerten (siehe [DATEXTAgent](#datextagent))
 
-<img width="1420" height="754" alt="image" src="https://github.com/user-attachments/assets/30fabe16-d885-46ed-ad66-d53e4191c4ef" />
+<img width="1439" height="941" alt="image" src="https://github.com/user-attachments/assets/8b253484-bf84-4d04-a955-593c81f3f9da" />
 
 </details>
 
@@ -229,8 +244,9 @@ Für die Remote-Inventarisierung gibt es den **DATEXTAgent**, einen schlanken Wi
 | Aufgabenplanung | TaskScheduler Managed Wrapper |
 | DNS | DnsClient.NET |
 | E-Mail (SMTP/MIME) | MailKit / MimeKit |
+| Active Directory | System.DirectoryServices.Protocols (LDAP, nativ) |
 | SNMP | #SNMP Library (SharpSnmpLib) |
-| Netzwerk-Topologie | GraphX for .NET |
+| Netzwerk-Topologie | Eigene Anordnung und Zeichnung (WPF), ohne Zusatzpaket |
 | Installer | WiX Toolset 5 |
 
 <details>
@@ -241,16 +257,18 @@ Für die Remote-Inventarisierung gibt es den **DATEXTAgent**, einen schlanken Wi
 | Paket | Version |
 |---|---|
 | DnsClient | 1.8.0 |
-| GraphX | 3.0.0 |
 | Lextm.SharpSnmpLib | 12.5.7 |
-| MailKit | 4.17.0 |
-| MimeKit | 4.17.0 |
+| MailKit | 4.18.1 |
+| Microsoft.Identity.Client | 4.90.1 |
+| MimeKit | 4.18.1 |
 | Newtonsoft.Json | 13.0.4 |
 | PdfSharp | 6.2.4 |
 | System.Data.SqlClient | 4.9.1 |
-| System.Management | 10.0.9 |
-| System.ServiceProcess.ServiceController | 10.0.9 |
-| System.Text.Encoding.CodePages | 10.0.9 |
+| System.DirectoryServices.Protocols | 8.0.1 |
+| System.Management | 10.0.12 |
+| System.Security.Cryptography.ProtectedData | 10.0.12 |
+| System.ServiceProcess.ServiceController | 10.0.12 |
+| System.Text.Encoding.CodePages | 10.0.12 |
 | TaskScheduler | 2.12.2 |
 
 **Transitive Pakete** (im Self-Contained-Build enthalten)
@@ -261,7 +279,6 @@ Für die Remote-Inventarisierung gibt es den **DATEXTAgent**, einen schlanken Wi
 | Microsoft.Extensions.DependencyInjection.Abstractions | 8.0.2 |
 | Microsoft.Extensions.Logging.Abstractions | 8.0.3 |
 | Microsoft.Win32.Registry | 5.0.0 |
-| QuickGraphCore | 1.0.0 |
 | runtime.native.System.Data.SqlClient.sni (win-x64/x86/arm64) | 4.4.0 |
 | System.CodeDom | 10.0.9 |
 | System.Diagnostics.EventLog | 10.0.9 |
@@ -286,8 +303,8 @@ Alle Pakete mit Lizenz, Copyright-Hinweis und Verwendungszweck sind in der Anwen
 
 ## Lizenz
 
-Copyright © 2024–2026 DATEXT Beratungsges. mbH. Alle Rechte vorbehalten.
-Dieses Projekt ist nicht Open Source. Die Verwendung, Vervielfältigung oder Weitergabe ohne ausdrückliche schriftliche Genehmigung der DATEXT Beratungsges. mbH ist nicht gestattet.
+Copyright © 2024–2026 DATEXT GmbH. Alle Rechte vorbehalten.
+Dieses Projekt ist nicht Open Source. Die Verwendung, Vervielfältigung oder Weitergabe ohne ausdrückliche schriftliche Genehmigung der DATEXT GmbH ist nicht gestattet.
 
 Eingesetzte Open-Source-Komponenten unterliegen ihren jeweiligen Lizenzen (siehe **Hilfe → Open-Source-Lizenzen** in der Anwendung).
 
