@@ -34,7 +34,7 @@ DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Window
 
 ## Installation
 
-Es gibt eine portable EXE. Sie kommen ohne installierte .NET 8 Laufzeit aus.
+Es gibt eine portable EXE mit selbstextrahierenden .NET 8 Laufzeitkomponenten.
 
 | Variante | Beschreibung |
 |---|---|
