@@ -291,9 +291,20 @@ Alle Pakete mit Lizenz, Copyright-Hinweis und Verwendungszweck sind in der Anwen
 ## Lizenz
 
 Copyright © 2024–2026 DATEXT GmbH. Alle Rechte vorbehalten.
-Dieses Projekt ist nicht Open Source. Die Verwendung, Vervielfältigung oder Weitergabe ohne ausdrückliche schriftliche Genehmigung der DATEXT GmbH ist nicht gestattet.
+DATEXT Diagnostics ist proprietäre Software und nicht Open Source. Der Quellcode ist nicht öffentlich; bereitgestellt wird nur die Programmdatei. Die Nutzung ist Kunden und Interessenten der DATEXT GmbH gestattet. Vervielfältigung zu anderen Zwecken, Weitergabe an Dritte, Veränderung und Rückentwicklung (Dekompilieren) bedürfen der ausdrücklichen schriftlichen Genehmigung der DATEXT GmbH.
 
 Eingesetzte Open-Source-Komponenten unterliegen ihren jeweiligen Lizenzen (siehe **Hilfe → Open-Source-Lizenzen** in der Anwendung).
+
+### Rechtliche Rahmenbedingungen der Nutzung
+
+DATEXT Diagnostics enthält Werkzeuge, die Systeme und Netzwerke analysieren (u. a. Geräte-, Port- und DHCP-Scans, Paketmitschnitt, Auswertung von Verzeichnisdiensten, Servern und Protokolldateien). Der Einsatz **auf fremden Systemen und Netzwerken** ist nur mit Berechtigung zulässig. Die Software wird ohne Gewähr bereitgestellt. Die Verantwortung für den rechtmäßigen Einsatz liegt bei den Anwendern. Die folgenden Hinweise sind keine Rechtsberatung; sie nennen Bereiche, die je nach Einsatz zu beachten sein können:
+
+- **Berechtigung und Auftrag:** Analysen fremder Systeme setzen eine vorherige, nachweisbare Erlaubnis des Betreibers voraus, am besten schriftlich mit Umfang, Zeitraum und Zielen. Ohne sie kann der Einsatz gegen Strafvorschriften zum Schutz von Computersystemen und Daten verstoßen (in Deutschland u. a. §§ 202a bis 202c, 303a und 303b StGB). Entsprechendes gilt in anderen Staaten.
+- **Datenschutz:** IP-Adressen, Benutzer- und Computernamen, Anmelde- und Protokolldaten sind in der Regel personenbezogen. Ihre Verarbeitung unterliegt der DSGVO und dem BDSG, einschließlich Rechtsgrundlage, Zweckbindung, Datensparsamkeit, Löschfristen und bei Tätigkeit im Kundenauftrag einem Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO). Exporte und Berichte (PDF, CSV, JSON) enthalten solche Daten und sind entsprechend zu schützen.
+- **Beschäftigtendaten und Mitbestimmung:** Auswertungen, die Rückschlüsse auf das Verhalten von Mitarbeitenden zulassen (z. B. Anmeldungen, Protokolle, Inventarisierung), können dem Beschäftigtendatenschutz und der Mitbestimmung des Betriebsrats unterliegen.
+- **Fernmeldegeheimnis:** Ein Paketmitschnitt kann Inhalte und Verbindungsdaten der Kommunikation Dritter erfassen. Er ist nur im eigenen Netz oder mit Einwilligung bzw. Auftrag der Betroffenen und der Betreiber zulässig und auf das Nötige zu beschränken.
+- **Dienste Dritter:** Einzelne Funktionen fragen Dienste im Internet ab (z. B. Betreiber- und Reputationsabfragen, Speedtests, Blacklists). Für diese gelten die Nutzungsbedingungen der jeweiligen Anbieter, die teils nur die nicht-kommerzielle Nutzung erlauben. Anwender prüfen vor dem Einsatz, ob ihre Nutzung diesen Bedingungen entspricht.
+- **Auswirkungen auf Systeme:** Scans und Abfragen erzeugen Last und Einträge in Protokollen, Intrusion-Detection- und Firewall-Systemen. Einsätze sind mit dem Betreiber abzustimmen.
 
 ---
 
