@@ -4,7 +4,7 @@
 
 **Windows-Diagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-![Version](https://img.shields.io/badge/Version-0.99.12.09-blue)
+![Version](https://img.shields.io/badge/Version-0.99.12.10-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
@@ -23,7 +23,7 @@ DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Window
 - **System:** System-Health,UEFI-Boot-Zertifikat, Autostart-Analyse, Ereignislog-Viewer, installierte Software, Winget-Paketverwaltung, System-Verwaltung, Troubleshooting-Werkzeuge
 - **Netzwerk:** Geräte-Scan, Ping & Latenz, Traceroute, IP & DNS Analyse, Port-Scan, Verbindungsanalyse, DHCP-Discovery, Firewall-Log-Auswertung
 - **E-Mail:** Verbindungs- und Sicherheitsprüfung von Mailservern, Domain- und Header-Analyse
-- **Server & Dienste:** Active Directory (Objektsuche, Gruppenrichtlinien, Sicherheits- und Zustandsanalyse), Analyse von IIS (Websites, FTP, Protokolle), Hyper-V (VMs, Datenträger, Speicherorte), MS-SQL (Datenbankanalyse)
+- **Server & Dienste:** Active Directory (Objektsuche, Gruppenrichtlinien, Sicherheits- und Zustandsanalyse), Analyse von IIS (Websites, FTP, Protokolle), Hyper-V (VMs, Datenträger, Speicherorte), DNS-Server (Zonen, Weiterleitungen, veraltete Einträge), DHCP-Server (Bereiche, Leases, Failover), Terminalserver (Sitzungen, Absicherung, Lizenzen), MS-SQL (Datenbankanalyse)
 - **Packet Capture:** Mitschnitt über PKTMON oder netsh trace, Konvertierung nach .pcap
 - **Speedtests:** Internet-Speedtest, LAN-Speedtest, Disk-Speedtest
 - **Email & Domain:** Verbindungs- und Sicherheitsprüfung von Mailservern, Domain- und Header-Analyse
@@ -34,11 +34,11 @@ DATEXT Diagnostics bündelt die Werkzeuge, die man bei der Fehlersuche an Window
 
 ## Installation
 
-Es gibt eine portable EXE mit selbstextrahierenden .NET 8 Laufzeitkomponenten.
+Es gibt eine portable EXE. Sie kommen ohne installierte .NET 8 Laufzeit aus.
 
 | Variante | Beschreibung |
 |---|---|
-| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Beim Start entpackt .NET die Laufzeit nach `%TEMP%\.net\DATEXT-Diagnostics\<Hashwert>` (Standardverhalten von Single-File-Anwendungen). Geeignet für Admin-Stick und einmalige Einsätze. |
+| **Portable EXE** (`DATEXT-Diagnostics.exe`) | Eine einzelne Datei, keine Installation. Die Programmbibliotheken werden direkt aus der signierten EXE geladen; beim Start werden nur wenige, von Microsoft signierte Systemdateien für die Oberfläche nach `%TEMP%\.net\DATEXT-Diagnostics\<Hashwert>` entpackt. Geeignet für Admin-Stick und einmalige Einsätze. |
 
 Die Programmdatei ist digital signiert.
 
@@ -76,7 +76,6 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
 <img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/028ae71f-b873-41b3-a8df-cc483a90779b" />
 <img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/f17ce5ee-11c5-43e6-8263-2a418a67a776" />
 <img width="1639" height="983" alt="image" src="https://github.com/user-attachments/assets/6959a59b-0af5-4bc3-8964-0b28fc26444f" />
-
 
 <details>
 <summary><b>System</b></summary>
@@ -134,6 +133,9 @@ Startbildschirm mit den beim Programmstart ermittelten Kernwerten des Systems.
   - Neben der Erreichbarkeit auch Aktivität (laufende Abfragen, Sperren), Performance-Kennzahlen (u. a. Page Life Expectancy), Konfiguration, Sicherheitsprüfung, Backups, Indizes und Agent-Jobs
 - **IIS-Analyse:** liest die `applicationHost.config` (auch eine kopierte Datei) und bewertet Sites, Bindings, Zertifikate, Anwendungspools und FTP-Sites (SSL-Richtlinie, Authentifizierung, Autorisierung). Auf dem lokalen Server kommen Laufzeitstatus der Sites, Pools und Dienste dazu. Die Auswertung der Web- und FTP-Protokolle zeigt auffällige Absender (Brute-Force, Scanner, Sondierung) und die langsamsten und fehlerhaftesten URLs je Website; eine Sperrliste fasst Angreifer-Netze für die Firewall zusammen.
 - **Hyper-V-Analyse:** bewertet virtuelle Maschinen, Datenträger (auch VHD-Sets, geteilte Datenträger und Pass-Through), Prüfpunkte und Speicherorte, einschließlich Cluster Shared Volumes und SMB-Freigaben, mit freiem Platz und möglichem Wachstum dynamischer Datenträger.
+- **DNS-Server-Analyse:** bewertet Zonen (dynamische Updates, Zonenübertragung, Alterung), Weiterleitungen, Rekursion und Bereinigung und listet veraltete Einträge. Eine Prüfung von außen (Antwort, Rekursion, SOA, NS- und Domänencontroller-Einträge) läuft auch ohne Rechte auf dem Server.
+- **DHCP-Server-Analyse:** bewertet Bereiche und Auslastung, Optionen, Leases, Reservierungen, Failover und das Überwachungsprotokoll und prüft, welche in Active Directory autorisierten Server tatsächlich antworten. Beides läuft ohne RSAT und ohne PowerShell.
+- **Terminalserver-Analyse:** bewertet Sitzungen, Absicherung (NLA, altes RDP, TLS, Zertifikat), Lizenzmodus, Karenzzeit und Lizenzbestand, Zeitlimits und Umleitungen, die Auslastung je Sitzung und Profilgrößen und wertet Fehlanmeldungen aus (Brute-Force, Password Spraying, Erfolg nach Fehlversuchen). Der Verbindungsaufbau auf Port 3389 läuft auch ohne Rechte und sendet nie Anmeldedaten. Aus dem Dialog lassen sich einzelne Sitzungen nach Rückfrage abmelden und die Lizenzverwaltung starten.
 
 <img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/6243efff-0bae-499e-be9d-8bb8e06c0dae" />
 <img width="1641" height="985" alt="image" src="https://github.com/user-attachments/assets/8003621c-fd95-49ad-981a-81b499f9d90a" />
@@ -214,6 +216,7 @@ Für die Remote-Inventarisierung gibt es den **DATEXTAgent**, einen schlanken Wi
 ## Hinweise
 
 - **Virenscanner:** Einzelne Virenscanner melden die EXE trotz digitaler Signatur als Fehlalarm. Ursache ist eine generische Heuristik für Self-Contained-.NET-Programme, die Netzwerk- und WMI-Abfragen durchführen. Ein tatsächlicher Schadcode-Treffer liegt nicht vor.
+- **Smart App Control / Windows Defender:** Versionen bis 0.99.12.09 konnten unter Windows 11 wegen „fehlender Signatur“ einzelner Programmbibliotheken (z. B. `System.Private.Xml.dll`) blockiert werden. Ab 0.99.12.10 ist das behoben; eine Ausnahme in Windows Defender ist nicht mehr nötig.
 - **Geräte-Scan und Windows 11 24H2 / Server 2025:** Die SMB-Erkennung zeigt für diese und neuere Versionen immer „Build 26100“. Das ist eine Eigenheit von Windows, kein Fehler.
 - **Gruppenrichtlinien über VPN:** Die Abfrage der Gruppenrichtlinien braucht Zugriff auf den Domänencontroller. Über langsame Verbindungen kann sie nach 90 Sekunden abbrechen; das Inventar weist dann in den Warnungen darauf hin.
 
@@ -234,7 +237,6 @@ Für die Remote-Inventarisierung gibt es den **DATEXTAgent**, einen schlanken Wi
 | Active Directory | System.DirectoryServices.Protocols (LDAP, nativ) |
 | SNMP | #SNMP Library (SharpSnmpLib) |
 | Netzwerk-Topologie | Eigene Anordnung und Zeichnung (WPF), ohne Zusatzpaket |
-| Installer | WiX Toolset 5 |
 
 <details>
 <summary>Vollständige Paketliste inkl. transitiver Abhängigkeiten</summary>
