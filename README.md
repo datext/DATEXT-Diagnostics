@@ -4,7 +4,7 @@
 
 **Windows-Diagnosetool für IT-Administratoren und technisch versierte Anwender**
 
-![Version](https://img.shields.io/badge/Version-0.99.12.10-blue)
+![Version](https://img.shields.io/badge/Version-0.99.12.11-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![Framework](https://img.shields.io/badge/.NET-8.0-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
